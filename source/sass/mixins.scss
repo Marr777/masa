@@ -49,6 +49,25 @@
   }
 }
 
+@mixin angle {
+  position: relative;
+
+  background-color: $color-default-white;
+
+  &::after {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    content: "";
+
+    width: 20px;
+    height: 20px;
+
+    mask-image:  url("../img/svg/angle.svg");
+    mask-repeat: no-repeat;
+    background-color: $color-default-white;
+  }
+}
 
 // Mobile first
 

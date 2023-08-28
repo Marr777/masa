@@ -25,13 +25,15 @@
             <img src="img/logo.svg" width="52" height="52" alt="Логотип компании Маса.">
           </a>
           <nav class="header__nav" data-accordion="element" data-header="header-inner">
-            <button class="header__burger btn btn--primary" type="button" aria-label="Открыть меню." data-accordion="button" data-header="header-btn">
+            <button class="header__burger btn btn--primary" type="button" aria-label="Открыть меню."
+              data-accordion="button" data-header="header-btn">
               <span>Меню</span>
               <div class="header__burger-icon btn__icon">
                 <span class="header__burger-line"></span>
               </div>
             </button>
-            <div class="header__nav-inner header__nav-inner--closed" data-accordion="content" data-header="header-content">
+            <div class="header__nav-inner header__nav-inner--closed" data-accordion="content"
+              data-header="header-content">
               <ul data-accordion="parent">
                 <li>
                   <a href="#about">О проекте</a>
@@ -101,7 +103,113 @@
     <main>
       <h1 class="visually-hidden">Маса — совместный проект правительства Израиля и Еврейского агентства Сохнут.</h1>
       <section class="hero">
-        <h2></h2>
+        <h2 class="visually-hidden">Наши предложения.</h2>
+        <div class="hero__swiper swiper">
+          <ul class="hero__slides swiper__wrapper">
+            <li class="hero__slide swiper__slide">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/hero/slide1-mobile.webp 1x, img/hero/slide1-mobile@2x.webp 2x" width="320" height="568">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/hero/slide1-tablet.webp 1x, img/hero/slide1-tablet@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" srcset="img/hero/slide1-desktop.webp 1x, img/hero/slide1-desktop@2x.webp 2x"
+                  width="1440" height="800">
+                <source media="(max-width: 767px)"
+                  srcset="img/hero/slide1-mobile.jpg 1x, img/hero/slide1-mobile@2x.jpg 2x" width="320" height="568">
+                <source media="(max-width: 1199px)"
+                  srcset="img/hero/slide1-tablet.jpg 1x, img/hero/slide1-tablet@2x.jpg 2x" width="768" height="1024">
+                <img src="img/hero/slide1-desktop.jpg" srcset="img/hero/slide1-desktop@2x.jpg" width="1440" height="800"
+                  alt="Фотография трех студентов.">
+              </picture>
+              <div class="container">
+                <div class="hero__slide-inner">
+                  <div class="hero__pagination"></div>
+                  <h3>Программы стажировок <br>в&nbsp;крупнейших компаниях Израиля</h3>
+                  <div class="hero__slide-info">
+                    <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных
+                      организациях.</p>
+                    <a href="#" class="hero__slide-btn btn btn--primary">
+                      <span>Подробнее</span>
+                      <div class="hero__btn-icon btn__icon">
+                        <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                          <use href="img/sprite.svg#btn-arrow" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="hero__slide swiper__slide">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/hero/slide2-mobile.webp 1x, img/hero/slide2-mobile@2x.webp 2x" width="320" height="568">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/hero/slide2-tablet.webp 1x, img/hero/slide2-tablet@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" srcset="img/hero/slide2-desktop.webp 1x, img/hero/slide2-desktop@2x.webp 2x"
+                  width="1440" height="800">
+                <source media="(max-width: 767px)"
+                  srcset="img/hero/slide2-mobile.jpg 1x, img/hero/slide2-mobile@2x.jpg 2x" width="320" height="568">
+                <source media="(max-width: 1199px)"
+                  srcset="img/hero/slide2-tablet.jpg 1x, img/hero/slide2-tablet@2x.jpg 2x" width="768" height="1024">
+                <img src="img/hero/slide2-desktop.jpg" srcset="img/hero/slide2-desktop@2x.jpg" width="1440" height="800"
+                  alt="Фотография группы волонтеров.">
+              </picture>
+              <div class="container">
+                <div class="hero__slide-inner">
+                  <div class="hero__pagination"></div>
+                  <h3>Волонтёрские программы &mdash; <br>внесите свой вклад в&nbsp;общество</h3>
+                  <div class="hero__slide-info">
+                    <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни
+                      и&nbsp;другое.</p>
+                    <a href="#" class="hero__slide-btn btn btn--primary">
+                      <span>Подробнее</span>
+                      <div class="hero__btn-icon btn__icon">
+                        <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                          <use href="img/sprite.svg#btn-arrow" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="hero__slide swiper__slide">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/hero/slide3-mobile.webp 1x, img/hero/slide3-mobile@2x.webp 2x" width="320" height="568">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/hero/slide3-tablet.webp 1x, img/hero/slide3-tablet@2x.webp 2x" width="768" height="1024">
+                <source type="image/webp" srcset="img/hero/slide3-desktop.webp 1x, img/hero/slide3-desktop@2x.webp 2x"
+                  width="1440" height="800">
+                <source media="(max-width: 767px)"
+                  srcset="img/hero/slide3-mobile.jpg 1x, img/hero/slide3-mobile@2x.jpg 2x" width="320" height="568">
+                <source media="(max-width: 1199px)"
+                  srcset="img/hero/slide3-tablet.jpg 1x, img/hero/slide3-tablet@2x.jpg 2x" width="768" height="1024">
+                <img src="img/hero/slide3-desktop.jpg" srcset="img/hero/slide3-desktop@2x.jpg" width="1440" height="800"
+                  alt="Фотография трех студентов.">
+              </picture>
+              <div class="container">
+                <div class="hero__slide-inner">
+                  <div class="hero__pagination"></div>
+                  <h3>Глобальный профессиональный <br>опыт обучения за&nbsp;рубежом</h3>
+                  <div class="hero__slide-info">
+                    <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая
+                      настоящий израильский стиль жизни!</p>
+                    <a href="#" class="hero__slide-btn btn btn--primary">
+                      <span>Подробнее</span>
+                      <div class="hero__btn-icon btn__icon">
+                        <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                          <use href="img/sprite.svg#btn-arrow" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer>

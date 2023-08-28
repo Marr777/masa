@@ -10,11 +10,16 @@ export const initSwiper = () => {
       clickable: true,
     },
     keyboard: true,
-    centeredSlides: true,
+    loop: true,
+    // autoplay: {
+    //   delay: 3000,
+    // },
 
     wrapperClass: 'swiper__wrapper',
     slideClass: 'swiper__slide',
   });
+
+  heroSwiper.enable();
 };
 
 

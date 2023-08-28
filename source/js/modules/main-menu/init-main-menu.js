@@ -1,3 +1,4 @@
+const body = document.body;
 const header = document.querySelector('[data-header="header"]');
 const headerInner = header.querySelector('[data-header="header-inner"]');
 const burgerBtn = header.querySelector('[data-header="header-btn"]');
@@ -10,6 +11,7 @@ const openMenu = () => {
   burgerBtn.classList.add('header__burger--open');
   burgerIcon.classList.add('header__burger-icon--open');
   headerContent.classList.remove('header__nav-inner--closed');
+  body.classList.add('scroll-lock');
 };
 
 const closeMenu = () => {
@@ -18,6 +20,7 @@ const closeMenu = () => {
   burgerBtn.classList.remove('header__burger--open');
   burgerIcon.classList.remove('header__burger-icon--open');
   headerContent.classList.add('header__nav-inner--closed');
+  body.classList.remove('scroll-lock');
 };
 
 const onBurgerBtnClick = () => {
