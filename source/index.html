@@ -18,11 +18,91 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container"></div>
+    <header class="header" data-header="header">
+      <div class="container">
+        <div class="header__wrapper" data-accordion="parent">
+          <a class="header__logo-link" href="index.html" aria-current="page">
+            <img src="img/logo.svg" width="52" height="52" alt="Логотип компании Маса.">
+          </a>
+          <nav class="header__nav" data-accordion="element" data-header="header-inner">
+            <button class="header__burger btn btn--primary" type="button" aria-label="Открыть меню." data-accordion="button" data-header="header-btn">
+              <span>Меню</span>
+              <div class="header__burger-icon btn__icon">
+                <span class="header__burger-line"></span>
+              </div>
+            </button>
+            <div class="header__nav-inner header__nav-inner--closed" data-accordion="content" data-header="header-content">
+              <ul data-accordion="parent">
+                <li>
+                  <a href="#about">О проекте</a>
+                </li>
+                <li data-accordion="element">
+                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню." data-accordion="button">
+                    <span>Программы</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#arrow-down" />
+                    </svg>
+                  </button>
+                  <div class="header__nav-dropdown" data-accordion="content">
+                    <ul>
+                      <li>
+                        <a href="#projects">Стажировки</a>
+                      </li>
+                      <li>
+                        <a href="#projects">Волонтёрство</a>
+                      </li>
+                      <li>
+                        <a href="#projects">Учёба</a>
+                      </li>
+                      <li>
+                        <a href="#projects">Религия</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>Как поехать</li>
+                <li>Отзывы</li>
+                <li data-accordion="element">
+                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню." data-accordion="button">
+                    <span>Новости</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#arrow-down" />
+                    </svg>
+                  </button>
+                  <div class="header__nav-dropdown" data-accordion="content">
+                    <ul>
+                      <li>
+                        <a href="#news">Общее</a>
+                      </li>
+                      <li>
+                        <a href="#news">Волонтёрство</a>
+                      </li>
+                      <li>
+                        <a href="#news">Стажировки</a>
+                      </li>
+                      <li>
+                        <a href="#news">Карьера</a>
+                      </li>
+                      <li>
+                        <a href="#news">Путешествия</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
     </header>
     <main>
-
+      <h1 class="visually-hidden">Маса — совместный проект правительства Израиля и Еврейского агентства Сохнут.</h1>
+      <section class="hero">
+        <h2></h2>
+      </section>
     </main>
     <footer>
       <div class="container"></div>

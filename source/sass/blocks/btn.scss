@@ -1,5 +1,31 @@
 .btn {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+
+  border-radius: 30px;
+  border: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  &--primary {
+    color: $color-primary;
+
+    box-shadow: 0 0 0 1px $color-primary inset;
+
+    .btn__icon {
+      background-color: $color-primary;
+      border-radius: 50%;
+    }
+  }
 
   &:disabled {
     opacity: 0.5;
@@ -10,4 +36,13 @@
   @include hover-focus {
     opacity: 0.8;
   }
+}
+
+.btn__icon {
+  width: 46px;
+  height: 46px;
+  padding: 19px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,8 +1,6 @@
-// Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
 @import "vendor/swiper";
+@import "vendor/data-accordion.scss";
 
 @import "variables";
 @import "mixins";
@@ -12,3 +10,4 @@
 @import "global/container";
 
 @import "blocks/btn";
+@import "blocks/header";
