@@ -19,12 +19,11 @@
   }
 
   @include vp-1199 {
-    min-height: 133vw;
-    ;
+    min-height: 133.3vw;
   }
 
   @include vp-767 {
-    min-height: 568px;
+    min-height: 177.5vw;
     padding-bottom: 20px;
   }
 

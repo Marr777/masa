@@ -1,0 +1,54 @@
+.about {
+  padding-top: 125px;
+}
+
+.about__wrapper {
+  display: grid;
+  grid-template-columns: 39% 40%;
+  gap: 152px;
+}
+
+.about__intro {
+  h2 {
+    @include title;
+
+    margin-bottom: 27px;
+  }
+
+  p {
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+.about__info {
+  h3 {
+    margin: 0;
+    margin-bottom: 38px;
+
+    font-size: 32px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $color-primary;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 33px;
+  }
+}
+
+.about__btn {
+  width: 56%;
+}
+
+
+.tempBtn {
+  background-color: red;
+
+  &--active {
+    background-color: green;
+  }
+}
