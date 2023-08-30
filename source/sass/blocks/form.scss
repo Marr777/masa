@@ -19,6 +19,13 @@
     font-weight: 400;
     line-height: 23px;
     text-align: center;
+
+    @include vp-1199 {
+      margin-bottom: 11px;
+
+      font-size: 28px;
+      line-height: 28px;
+    }
   }
 
   p {
@@ -26,6 +33,10 @@
     margin-bottom: 18px;
 
     text-align: center;
+
+    @include vp-1199 {
+      line-height: 23px;
+    }
   }
 }
 
@@ -183,7 +194,7 @@
   }
 }
 
-input[type="checkbox"]:checked ~ .form__checkbox-icon {
+input[type="checkbox"]:checked~.form__checkbox-icon {
   background-color: $color-primary;
 
   &::after {
