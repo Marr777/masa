@@ -19,6 +19,38 @@ export const initSwiper = () => {
     slideClass: 'swiper__slide',
   });
 
+  const programsSwiper = new Swiper('.programs__swiper', {
+    // pagination: {
+    //   el: '.hero__pagination',
+    //   type: 'bullets',
+    //   bulletClass: 'hero__pagination-bullet',
+    //   bulletActiveClass: 'hero__pagination-bullet--active',
+    //   clickable: true,
+    // },
+    keyboard: true,
+    // autoplay: {
+    //   delay: 3000,
+    // },
+
+    wrapperClass: 'swiper__wrapper',
+    slideClass: 'swiper__slide',
+    slidesPerView: 3,
+    breakpoints: {
+      1259: {
+        spaceBetween: 32,
+      },
+      1199: {
+        spaceBetween: 15,
+      },
+    },
+    scrollbar: {
+      el: '.programs__scrollbar',
+      draggable: true,
+      dragSize: 392,
+      hide: false,
+    },
+  });
+
   heroSwiper.enable();
 };
 
