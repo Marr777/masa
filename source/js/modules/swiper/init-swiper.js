@@ -20,38 +20,50 @@ export const initSwiper = () => {
   });
 
   const programsSwiper = new Swiper('.programs__swiper', {
-    // pagination: {
-    //   el: '.hero__pagination',
-    //   type: 'bullets',
-    //   bulletClass: 'hero__pagination-bullet',
-    //   bulletActiveClass: 'hero__pagination-bullet--active',
-    //   clickable: true,
-    // },
     keyboard: true,
-    // autoplay: {
-    //   delay: 3000,
-    // },
-
     wrapperClass: 'swiper__wrapper',
     slideClass: 'swiper__slide',
-    slidesPerView: 3,
-    breakpoints: {
-      1259: {
-        spaceBetween: 32,
-      },
-      1199: {
-        spaceBetween: 15,
-      },
-    },
+
     scrollbar: {
       el: '.programs__scrollbar',
       draggable: true,
       dragSize: 392,
       hide: false,
     },
+
+    navigation: {
+      nextEl: '.programs__swiper-btn--next',
+      prevEl: '.programs__swiper-btn--prev',
+    },
+
+    breakpoints: {
+      1259: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        spaceBetween: 30,
+        slidesPerView: 'auto',
+        scrollbar: {
+          dragSize: 324,
+        },
+      },
+      320: {
+        slidesPerView: 1,
+        scrollbar: {
+          el: '',
+          enabled: false,
+        },
+      },
+    },
   });
 
   heroSwiper.enable();
+  programsSwiper.enable();
 };
 
 

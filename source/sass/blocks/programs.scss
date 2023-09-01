@@ -1,31 +1,85 @@
 .programs {
   padding-top: 123px;
   padding-bottom: 100px;
+
+  @include vp-1199 {
+    padding-top: 99px;
+  }
+
+  @include vp-767 {
+    padding-top: 62px;
+  }
 }
 
-.programs__intro {
-  display: flex;
-  justify-content: space-between;
+.programs__wrapper {
+  display: grid;
+  grid-template-columns: auto auto 94px;
+  grid-template-rows: repeat(3, auto);
   align-items: center;
-  margin-bottom: 43px;
 
   h2 {
     @include title;
+
+    @include vp-1199 {
+      padding-left: 45px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  @include vp-767 {
+    grid-template-columns: 70% auto;
   }
 }
 
 .programs__btn {
+  grid-column: 2/4;
   gap: 30px;
+  width: fit-content;
+  justify-self: end;
+
+  @include vp-1199 {
+    margin-right: 45px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 100%;
+    padding-left: 30px;
+  }
 }
 
 .programs__swiper {
-  padding-bottom: 62px;
+  width: 100%;
+  margin-top: 43px;
+  padding-bottom: 33px;
+  grid-column: 1/-1;
 
   ul {
     margin: 0;
     padding: 0;
 
     list-style: none;
+  }
+
+  @include vp-1199 {
+    margin-top: 42px;
+    padding-left: 45px;
+    padding-bottom: 34px;
+
+    li {
+      width: 44.8%;
+    }
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+    padding-bottom: 32px;
+    margin-top: 28px;
   }
 }
 
@@ -51,6 +105,16 @@
 
     object-fit: cover;
     border-radius: 12px;
+  }
+
+  @include vp-1199 {
+    min-height: 54.5vw;
+    padding: 0 41px 20px 20px;
+  }
+
+  @include vp-767 {
+    padding: 0 10px 18px 10px;
+    min-height: 124.9vw;
   }
 }
 
@@ -80,11 +144,48 @@
 
     border-radius: 12px 12px 0px 0px;
     background-color: $color-default-white;
+
+    @include vp-1199 {
+      padding: 13px 0 0 18px;
+      min-width: 173px;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      padding: 19px 0 5px 18px;
+      min-width: 146px;
+
+      font-size: 16px;
+      line-height: 18px;
+
+      border-radius: 11px 11px 0 0;
+
+      &::after {
+        right: -19px;
+
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 
   p {
+    margin: 0;
+
     font-size: 14px;
     line-height: 18px;
+
+    @include vp-1199 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }
 
@@ -98,6 +199,14 @@
 
   border-radius: 0px 12px 12px 12px;
   background-color: $color-default-white;
+
+  @include vp-1199 {
+    min-height: 77px;
+  }
+
+  @include vp-767 {
+    min-height: 69px;
+  }
 }
 
 .programs__item-btn {
@@ -115,14 +224,47 @@
 .programs__scrollbar {
   position: relative;
 
-  margin-top: 51px;
   height: 2px;
+  grid-column: 1/3;
+  width: 78.7vw;
+
   background-color: rgba(49, 109, 194, 0.2);
+  border-radius: 0;
 
   div {
     width: 392px;
     height: 2px;
+
     background-color: $color-primary;
+    border-radius: 0;
+    cursor: pointer;
+  }
+
+  @include vp-1199 {
+    margin-left: 45px;
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }
 
+.programs__swiper-btns {
+  display: flex;
+  grid-column: 3/-1;
+  justify-self: end;
+
+  transform: translateX(7px);
+
+  @include vp-1199 {
+    margin-right: 45px;
+  }
+
+  @include vp-767 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-right: 0;
+
+    transform: translateX(5px);
+  }
+}

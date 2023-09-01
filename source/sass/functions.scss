@@ -1,3 +1,8 @@
 @function size-desktop($size-in-px) {
   @return calc($size-in-px / $vp-1440 * 90vw);
 }
+
+@function size-tablet($size-in-px) {
+  @return calc($size-in-px / 768px * 100vw);
+}
+
