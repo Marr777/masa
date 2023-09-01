@@ -62,8 +62,37 @@ export const initSwiper = () => {
     },
   });
 
+  const newsSwiper = new Swiper('.news__swiper', {
+    keyboard: true,
+    wrapperClass: 'swiper__wrapper',
+    slideClass: 'swiper__slide',
+
+    // navigation: {
+    //   nextEl: '.programs__swiper-btn--next',
+    //   prevEl: '.programs__swiper-btn--prev',
+    // },
+
+    slidesPerView: 'auto',
+
+    // breakpoints: {
+    //   1200: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 32,
+    //   },
+    //   768: {
+    //     spaceBetween: 30,
+    //     slidesPerView: 'auto',
+    //   },
+    //   320: {
+    //     slidesPerView: 1,
+    //   },
+    // },
+  });
+
+
   heroSwiper.enable();
   programsSwiper.enable();
+  newsSwiper.enable();
 };
 
 
