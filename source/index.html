@@ -62,8 +62,12 @@
                     </ul>
                   </div>
                 </li>
-                <li>Как поехать</li>
-                <li>Отзывы</li>
+                <li>
+                  <a href="#depart">Как поехать</a>
+                </li>
+                <li>
+                  <a href="#feedback">Отзывы</a>
+                </li>
                 <li data-accordion="element">
                   <button class="header__dropdown-btn" aria-label="Развернуть пункт меню." data-accordion="button">
                     <span>Новости</span>
@@ -509,12 +513,14 @@
             </div>
             <div class="programs__scrollbar"></div>
             <div class="programs__swiper-btns">
-              <button class="programs__swiper-btn programs__swiper-btn--prev btn btn--swiper btn--swiper-prev" aria-label="Перелистнуть назад.">
+              <button class="programs__swiper-btn programs__swiper-btn--prev btn btn--swiper btn--swiper-prev"
+                aria-label="Перелистнуть назад.">
                 <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#swiper-arrow" />
                 </svg>
               </button>
-              <button class="programs__swiper-btn programs__swiper-btn--next btn btn--swiper" aria-label="Перелистнуть вперед.">
+              <button class="programs__swiper-btn programs__swiper-btn--next btn btn--swiper"
+                aria-label="Перелистнуть вперед.">
                 <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
                   <use href="img/sprite.svg#swiper-arrow" />
                 </svg>
@@ -524,6 +530,63 @@
         </div>
       </section>
 
+      <section class="depart">
+        <div class="container">
+          <div class="depart__wrapper">
+            <div class="depart__intro">
+              <h2>Как поехать</h2>
+              <p>Свяжитесь с&nbsp;координатором, чтобы узнать полную информацию. Вы&nbsp;получите актуальные сведения
+                о&nbsp;доступных программах и&nbsp;городах, в&nbsp;которых можете пройти программу.</p>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/department/street-sign-mobile.webp 1x, img/department/street-sign-mobile@2x.webp 2x"
+                  width="290" height="200">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/department/street-sign-tablet.webp 1x, img/department/street-sign-tablet@2x.webp 2x"
+                  width="678" height="375">
+                <source type="image/webp"
+                  srcset="img/department/street-sign-desktop.webp 1x, img/department/street-sign-desktop@2x.webp 2x"
+                  width="498" height="363">
+                <source media="(max-width: 767px)"
+                  srcset="img/department/street-sign-mobile.jpg 1x, img/department/street-sign-mobile@2x.jpg 2x"
+                  width="290" height="200">
+                <source media="(max-width: 1199px)"
+                  srcset="img/department/street-sign-tablet.jpg 1x, img/department/street-sign-tablet@2x.jpg 2x"
+                  width="678" height="375">
+                <img src="img/department/street-sign-desktop.jpg" srcset="img/department/street-sign-desktop@2x.jpg"
+                  width="498" height="363" alt="Дорожный знак в Израиле.">
+              </picture>
+            </div>
+            <div class="depart__info">
+              <h3>Чтобы получить грант на&nbsp;обучение, вам нужно:</h3>
+              <ul>
+                <li>
+                  <div class="depart__info-item">
+                    <p>Быть в&nbsp;возрасте от&nbsp;16&nbsp;до&nbsp;30&nbsp;лет</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="depart__info-item">
+                    <p>Иметь оконченное среднее образование</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="depart__info-item">
+                    <p>Иметь документально подтверждённые еврейские корни и&nbsp;пройти консульскую проверку</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="depart__info-item">
+                    <p>За&nbsp;последние 2&nbsp;года быть не&nbsp;больше 3х&nbsp;месяцев подряд непрерывно
+                      в&nbsp;Израиле
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
     </main>
