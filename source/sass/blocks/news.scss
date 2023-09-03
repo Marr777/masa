@@ -8,6 +8,22 @@
     margin-bottom: 45px;
 
     text-align: center;
+
+    @include vp-1199 {
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 28px;
+    }
+  }
+
+  @include vp-1199 {
+    padding-top: 99px;
+  }
+
+  @include vp-767 {
+    padding-top: 68px;
   }
 }
 
@@ -24,6 +40,32 @@
     align-items: center;
 
     list-style: none;
+
+    @include vp-1199 {
+      gap: 10px;
+    }
+
+    @include vp-767 {
+      gap: 12px;
+      padding: 1px;
+    }
+  }
+
+  @include vp-1199 {
+    margin-bottom: 31px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 22px;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
@@ -46,10 +88,23 @@
 
     outline: 1px solid $color-primary;
   }
+
+  @include vp-1199 {
+    padding: 12px 20px;
+  }
+
+  @include vp-767 {
+    padding: 8px 14px;
+
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
 }
 
 .news__swiper {
   width: 100%;
+  margin-bottom: 41px;
 
   ul {
     margin: 0;
@@ -57,6 +112,30 @@
     gap: 2.6%;
 
     list-style: none;
+
+    @include vp-1199 {
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 95.2vw;
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      height: 184.7vw;
+      gap: 22px;
+    }
+  }
+
+  @include vp-1199 {
+    margin-bottom: 23px;
+
+    li:nth-child(4) {
+      order: 1;
+    }
+
+    li:nth-child(3) {
+      order: 2;
+    }
   }
 }
 
@@ -75,8 +154,22 @@
 
     width: 100%;
     min-height: 27.7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-right: 45px;
 
     border-radius: 12px;
+
+    @include vp-1199 {
+      min-height: unset;
+      height: 100%;
+      padding-right: 85px;
+    }
+
+    @include vp-767 {
+      padding-right: 28px;
+    }
   }
 
   picture,
@@ -91,18 +184,40 @@
 
     object-fit: cover;
     border-radius: 12px;
+
+    @include vp-1199 {
+      height: 100%;
+    }
+  }
+
+  @include vp-1199 {
+    min-width: 47.79%;
+    width: unset;
+    max-width: unset;
+    min-height: 45.58vw;
+  }
+
+  @include vp-767 {
+    min-width: 100%;
+    min-height: 74.58vw;
+
+    &--big {
+      min-height: 103vw;
+    }
   }
 }
 
 .news__article-wrapper {
   @include angle;
 
+  height: fit-content;
+
   background-color: $color-transparent;
 
   &::after {
     bottom: unset;
     right: unset;
-    top: -18px;
+    top: -20px;
     left: 0;
 
     background-color: $color-light;
@@ -112,7 +227,7 @@
     @include angle;
 
     display: block;
-    padding: 12px 12px 6px 0;
+    padding: 12px 12px 5px 0;
     margin-top: -1px;
     width: fit-content;
 
@@ -129,12 +244,164 @@
     &::after {
       background-color: $color-light;
     }
+
+    @include vp-1199 {
+      padding: 11px 12px 0 0;
+      min-height: 27px;
+    }
+
+    @include vp-767 {
+      padding: 9px 12px 0 0;
+
+      &::after {
+        right: -16px;
+
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
 
+  h3 {
+    @include angle;
+
+    margin: 0;
+    margin-top: -1px;
+    width: 214px;
+    width: 89%;
+    padding: 3px 10px 4px 0;
+    margin-right: 72px;
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $color-primary;
+
+    background-color: $color-light;
+    border-radius: 0px 12px 0px 0px;
+
+    &::after {
+      background-color: $color-light;
+    }
+
+    &>br {
+      display: none;
+    }
+
+    @include vp-1199 {
+      padding: 3px 7px 1px 0;
+      width: 87%;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      width: 76%;
+      padding: 11px 7px 4px 0;
+
+      font-size: 16px;
+      line-height: 18px;
+
+      &::after {
+        right: -16px;
+
+        width: 16px;
+        height: 16px;
+      }
+
+      &>br {
+        display: block;
+      }
+    }
+  }
+
+  &--big {
+    h3 {
+      padding: 13px 10px 4px 0;
+      width: fit-content;
+      max-width: 291px;
+
+      @include vp-1199 {
+        padding: 9px 7px 2px 0;
+        max-width: unset;
+        width: 87%;
+      }
+
+      @include vp-767 {
+        padding: 11px 7px 4px 0;
+        width: 76%;
+      }
+    }
+  }
+
+  @include vp-767 {
+    &::after {
+      top: -17px;
+
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
+// стоит заменить проценты на пиксели в ширине текста - будет лучше
+
 .news__article-info {
+  @include angle;
+
+  padding: 9px 17px 11px 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
   display: flex;
+  gap: 16px;
+  width: 240px;
+  width: 100%;
+
+  border-radius: 0px 12px;
+  background-color: $color-light;
+
+  &--big {
+    padding: 9px 6px 11px 0;
+    width: 69.6%;
+    width: 389px;
+
+    @include vp-1199 {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    background-color: $color-light;
+  }
+
+  p {
+    margin: 0;
+    max-width: 325px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  @include vp-1199 {
+    padding: 10px 17px 15px 0;
+  }
+
+  @include vp-767 {
+    padding: 14px 9px 9px 0;
+
+    &::after {
+      right: -16px;
+
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 
@@ -147,5 +414,49 @@
 .news__btn-icon {
   width: 30px;
   height: 30px;
+  padding: 0;
+}
+
+.news__swiper-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news__pagination {
+  display: flex;
+  gap: 20px;
+
+  @include vp-767 {
+    gap: 16px;
+  }
+}
+
+.news__pagination-btn {
+  padding: 6px 13px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(49, 109, 194, 0.5);
+
+  border: none;
+  border-radius: 50%;
+
+  transition: background-color $trans-default, color $trans-default;
+
+  &--active {
+    color: $color-default-white;
+
+    background-color: $color-primary;
+  }
+
+  @include vp-767 {
+    padding: 6px 10px;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.news__swiper-btn {
   padding: 0;
 }

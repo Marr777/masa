@@ -66,27 +66,35 @@ export const initSwiper = () => {
     keyboard: true,
     wrapperClass: 'swiper__wrapper',
     slideClass: 'swiper__slide',
+    cssMode: 'true',
 
-    // navigation: {
-    //   nextEl: '.programs__swiper-btn--next',
-    //   prevEl: '.programs__swiper-btn--prev',
-    // },
+    navigation: {
+      nextEl: '.news__swiper-btn--next',
+      prevEl: '.news__swiper-btn--prev',
+    },
 
-    slidesPerView: 'auto',
+    pagination: {
+      el: '.news__pagination',
+      clickable: true,
+      bulletClass: 'news__pagination-btn',
+      bulletActiveClass: 'news__pagination-btn--active',
+      renderBullet: (index, className) => {
+        return '<button class="' + className + '">' + (index + 1) + '</button>';
+      },
+    },
 
-    // breakpoints: {
-    //   1200: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 32,
-    //   },
-    //   768: {
-    //     spaceBetween: 30,
-    //     slidesPerView: 'auto',
-    //   },
-    //   320: {
-    //     slidesPerView: 1,
-    //   },
-    // },
+    breakpoints: {
+      1200: {
+        slidesPerView: 'auto',
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+    },
   });
 
 
