@@ -21,6 +21,8 @@ export class Accordions {
 
     evt.preventDefault();
     const parent = target.closest('[data-accordion="parent"]');
+    const btn = target.closest('[data-accordion="button"]');
+    const wrapper = target.closest('[data-accordion="wrapper"]');
 
     if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
       return;
@@ -28,10 +30,10 @@ export class Accordions {
 
     const element = target.closest('[data-accordion="element"]');
     if (element.classList.contains('is-active')) {
-      this.closeAccordion(element);
+      this.closeAccordion(element, btn, wrapper);
       return;
     }
-    this.openAccordion(element);
+    this.openAccordion(element, btn, wrapper);
   }
 
   _windowResizeHandler() {
@@ -108,7 +110,7 @@ export class Accordions {
     this.updateAccordionsHeight();
   }
 
-  openAccordion(element, transition = true) {
+  openAccordion(element, btn, wrapper, transition = true) {
     const parentElement = element.closest('[data-accordion="parent"]');
     const contentElement = element.querySelector('[data-accordion="content"]');
     this._openHeight += contentElement.scrollHeight;
@@ -118,6 +120,12 @@ export class Accordions {
     }
 
     element.classList.add('is-active');
+    btn.classList.add('is-active');
+    if (wrapper) {
+      wrapper.classList.add('is-active');
+    }
+    contentElement.classList.add('is-active');
+
     if (transition) {
       contentElement.style.maxHeight = `${this._openHeight}px`;
     } else {
@@ -136,12 +144,19 @@ export class Accordions {
     this._openHeight = 0;
   }
 
-  closeAccordion(element, transition = true) {
+  closeAccordion(element, btn, wrapper, transition = true) {
     const contentElement = element.querySelector('[data-accordion="content"]');
     if (!contentElement) {
       return;
     }
+
     element.classList.remove('is-active');
+    btn.classList.remove('is-active');
+    if (wrapper) {
+      wrapper.classList.remove('is-active');
+    }
+    contentElement.classList.remove('is-active');
+
     if (transition) {
       contentElement.style.maxHeight = '0';
     } else {
