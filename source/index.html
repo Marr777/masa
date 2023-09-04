@@ -1025,6 +1025,85 @@
         </div>
       </section>
 
+      <section class="form">
+        <div class="container container--form">
+          <div class="form__container">
+            <h2>Напишите нам</h2>
+            <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+            <div class="form__wrapper form__wrapper--primary" data-form-validate data-callback="base">
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="text"
+                  data-limitation="letters-and-digit">
+                  <label>
+                    <span>Имя</span>
+                    <input type="text" name="name" required>
+                  </label>
+                </div>
+                <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="phone">
+                  <label>
+                    <span>Телефон</span>
+                    <input type="tel" name="phone" required>
+                  </label>
+                </div>
+                <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="text">
+                  <label>
+                    <span>Ваше сообщение</span>
+                    <input type="text" name="message" required>
+                  </label>
+                </div>
+                <div class="form__input-wrapper form__select form__select--primary custom-select" data-select="data-select"
+                  data-validate-type="select" data-name="city" data-id="city">
+                  <span>Выберите город</span>
+                  <button class="form__select-btn form__select-btn--primary custom-select__button" type="button"
+                    aria-label="Выберите город.">
+                    <span class="custom-select__text"></span>
+                    <span class="form__select-icon form__select-icon--primary custom-select__icon"></span>
+                  </button>
+                  <ul class="form__select-list form__select-list--primary custom-select__list" role="listbox">
+                    <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg"
+                      aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg"
+                      aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg"
+                      aria-selected="false" role="option">Санкт-Петербург</li>
+                    <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg"
+                      aria-selected="false" role="option">Санкт-Петербург</li>
+                  </ul>
+                </div>
+                <div class="form__checkbox form__checkbox--primary" data-validate-type="checkbox">
+                  <label>
+                    <input type="checkbox" value="agree" name="user-agreement" required>
+                    <span class="form__checkbox-icon form__checkbox-icon--primary"></span>
+                    <span class="form__checkbox-label">Я согласен на обработку моих персональных данных</span>
+                  </label>
+                </div>
+                <button class="form__btn form__btn--primary btn btn--secondary" type="submit">
+                  <span>Отправить</span>
+                  <span class="form__btn-icon btn__icon btn__icon--secondary">
+                    <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#btn-arrow" />
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 1199px)"
+              srcset="img/form/form-background-tablet.webp 1x, img/form/form-background-tablet@2x.webp 2x" width="678"
+              height="780">
+            <source type="image/webp"
+              srcset="img/form/form-background-desktop.webp 1x, img/form/form-background-desktop@2x.webp 2x"
+              width="1240" height="803">
+            <source media="(max-width: 1199px)"
+              srcset="img/form/form-background-tablet.jpg 1x, img/form/form-background-tablet@2x.jpg 2x" width="678"
+              height="780">
+            <img src="img/form/form-background-desktop.jpg" srcset="img/form/form-background-desktop@2x.jpg"
+              width="1240" height="803" alt="Фотография пляжа в Израиле.">
+          </picture>
+        </div>
+      </section>
+
     </main>
     <footer>
       <div class="container"></div>
@@ -1065,7 +1144,7 @@ alt="Фотография трех студентов."> -->
           </svg>
         </button>
         <h2>Напишите нам</h2>
-        <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+        <p>Оставьте ваши контакты, если&nbsp;у вас остались&nbsp;вопросы&nbsp;– мы на них ответим!</p>
         <div class="form__wrapper" data-form-validate data-callback="base">
           <form action="https://echo.htmlacademy.ru/" method="post">
             <div class="form__input-wrapper form__input-wrapper--modal" data-required data-validate-type="text"
@@ -1100,7 +1179,7 @@ alt="Фотография трех студентов."> -->
                   aria-selected="false" role="option">Санкт-Петербург</li>
               </ul>
             </div>
-            <div class="form__checkbox" data-validate-type="checkbox">
+            <div class="form__checkbox form__checkbox--modal" data-validate-type="checkbox">
               <label>
                 <input type="checkbox" value="agree" name="user-agreement">
                 <span class="form__checkbox-icon form__checkbox-icon--modal"></span>

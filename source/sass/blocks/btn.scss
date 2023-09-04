@@ -35,6 +35,16 @@
     }
   }
 
+  &--secondary {
+    color: $color-default-white;
+
+    box-shadow: 0 0 0 1px $color-default-white inset;
+
+    .btn__icon {
+      background-color: $color-default-white;
+    }
+  }
+
   &--swiper {
     padding: 6px;
     justify-content: center;
@@ -78,5 +88,15 @@
     width: 34px;
     height: 34px;
     padding: 12px;
+  }
+
+  svg {
+    stroke: $color-default-white;
+  }
+
+  &--secondary {
+    svg {
+      stroke: $color-primary;
+    }
   }
 }

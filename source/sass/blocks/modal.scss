@@ -38,10 +38,14 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 90px 0 99px;
+    padding: 92px 0 99px;
+
+    @include vp-1199 {
+      padding: 204px 0 99px;
+    }
 
     @include vp-767 {
-      padding: 60px 16px;
+      padding: 22px 16px;
     }
   }
 
@@ -58,18 +62,6 @@
 
   &__content {
     position: relative;
-
-    width: 510px;
-    padding: 60px 80px;
-
-    @include vp-1199 {
-      padding: 55px 80px 60px;
-    }
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
   }
 
   &__close-btn {

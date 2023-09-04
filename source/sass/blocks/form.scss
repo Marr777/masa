@@ -1,9 +1,28 @@
 .form {
+  position: relative;
+
+  padding-top: 121px;
+
+  @include vp-1199 {
+    padding-top: 99px;
+  }
+
+  @include vp-767 {
+    padding-top: 66px;
+  }
+
   &--modal {
-    position: relative;
+    width: 510px;
+    padding: 57px 80px 61px;
+    align-self: flex-start;
 
     background-color: $color-default-white;
     border-radius: 16px;
+
+    @include vp-767 {
+      width: 100%;
+      padding: 38px 15px;
+    }
 
     h2 {
       margin: 0;
@@ -26,6 +45,13 @@
       font-size: 28px;
       line-height: 28px;
     }
+
+    @include vp-767 {
+      margin-bottom: 7px;
+
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 
   p {
@@ -35,7 +61,102 @@
     text-align: center;
 
     @include vp-1199 {
-      line-height: 23px;
+      line-height: 21px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &--modal p {
+    @include vp-767 {
+      width: 79%;
+      margin: 0 auto;
+      margin-bottom: 18px;
+    }
+  }
+
+  picture,
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    box-sizing: content-box;
+    border-radius: 16px;
+  }
+
+  img {
+    width: calc(100% - 200px);
+    left: 100px;
+    height: 100%;
+
+    @include vp-1199 {
+      left: 45px;
+      width: calc(100% - 90px);
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.form__container {
+  width: 40.2%;
+  padding: 89px 74px 51px;
+
+  color: $color-light;
+
+  border-radius: 16px;
+  background-color: $color-primary;
+
+  @include vp-1199 {
+    width: 65.2%;
+    padding: 61px 46px 58px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 54px 15px 50px;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 32px;
+
+    color: $color-default-white;
+    text-align: left;
+
+    @include vp-1199 {
+      margin-bottom: 26px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 18px;
+    }
+  }
+
+  p {
+    margin-bottom: 17px;
+
+    text-align: left;
+
+    opacity: 0.9;
+
+    @include vp-1199 {
+      margin-bottom: 31px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 26px;
     }
   }
 }
@@ -45,6 +166,18 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include vp-767 {
+      gap: 13px;
+    }
+  }
+
+  &--primary {
+    form {
+      @include vp-767 {
+        gap: 21px;
+      }
+    }
   }
 }
 
@@ -72,11 +205,50 @@
 
     border-radius: 8px;
     border: none;
+
+    @include vp-767 {
+      min-height: 35px;
+      width: 100%;
+      padding: 14px 25px;
+      font-size: 12px;
+    }
+  }
+
+  input[name="message"] {
+    min-height: 98px;
+
+    @include vp-767 {
+      min-height: 92px;
+    }
   }
 
   &--modal {
     input {
       outline: 1px solid rgba(72, 72, 72, 0.3);
+    }
+  }
+
+  &--primary {
+    label {
+      gap: 13px;
+    }
+
+    input {
+      background-color: $color-transparent;
+      outline: 1px solid rgba(255, 255, 255, 0.3);
+
+      @include vp-767 {
+        min-height: 47px;
+      }
+    }
+
+    span {
+      opacity: 0.8;
+
+      @include vp-767 {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
   }
 }
@@ -89,6 +261,17 @@
   span {
     display: block;
     margin-bottom: 7px;
+  }
+
+  &--primary {
+    span {
+      @include vp-767 {
+        margin-bottom: 15px;
+
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
   }
 }
 
@@ -103,8 +286,32 @@
   border-radius: 8px;
   border: none;
 
+  @include vp-767 {
+    height: 41px;
+    min-height: 41px;
+    padding: 12px 19px;
+    font-size: 10px;
+  }
+
   &--modal {
     outline: 1px solid rgba(72, 72, 72, 0.3);
+  }
+
+  &--primary {
+    padding: 16px 21px;
+    margin-top: 9px;
+    margin-bottom: 5px;
+
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+
+    @include vp-1199 {
+      margin-top: 5px;
+      margin-bottom: 2px;
+    }
+
+    @include vp-767 {
+      min-height: 47px;
+    }
   }
 
   span:not(.form__select-icon) {
@@ -117,6 +324,10 @@
 
   &--modal {
     background-color: $color-main-dark;
+  }
+
+  &--primary {
+    background-color: $color-default-white;
   }
 }
 
@@ -135,6 +346,11 @@
 
     outline: 1px solid rgba(72, 72, 72, 0.3);
   }
+
+  &--primary {
+    color: $color-main-dark;
+    background-color: $color-default-white;
+  }
 }
 
 .form__select-item {
@@ -143,6 +359,14 @@
 
 .form__checkbox {
   margin-bottom: 14px;
+
+  &--modal {
+    margin-top: 3px;
+
+    @include vp-767 {
+      margin-top: 5px;
+    }
+  }
 
   label {
     display: flex;
@@ -159,6 +383,14 @@
     line-height: 12px;
     opacity: 0.9;
   }
+
+  &--primary {
+    margin-bottom: 24px;
+
+    @include vp-767 {
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .form__checkbox-icon {
@@ -170,8 +402,15 @@
 
   border: 1px solid $color-primary;
   background-color: $color-transparent;
+  border-radius: 2px;
 
   transition: background-color $trans-default;
+
+  @include vp-767 {
+    width: 26px;
+    height: 21px;
+    transform: translateX(-2px);
+  }
 
   &::after {
     position: absolute;
@@ -192,6 +431,10 @@
 
     transition: background-color $trans-default;
   }
+
+  &--primary {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
 }
 
 input[type="checkbox"]:checked~.form__checkbox-icon {
@@ -202,6 +445,14 @@ input[type="checkbox"]:checked~.form__checkbox-icon {
   }
 }
 
+input[type="checkbox"]:checked~.form__checkbox-icon--primary {
+  background-color: $color-default-white;
+
+  &::after {
+    background-color: $color-primary;
+  }
+}
+
 
 .form__btn {
   width: fit-content;
@@ -209,6 +460,28 @@ input[type="checkbox"]:checked~.form__checkbox-icon {
   margin: 0 auto;
 
   background-color: transparent;
+
+  @include vp-767 {
+    width: 100%;
+    padding: 4px;
+    gap: 0;
+
+    span,
+    .form__btn-icon {
+      margin-left: auto;
+    }
+  }
+
+  &--primary {
+    width: 100%;
+    padding: 4px;
+    gap: 0;
+
+    span,
+    .form__btn-icon {
+      margin-left: auto;
+    }
+  }
 }
 
 .form__close-btn {
@@ -226,4 +499,14 @@ input[type="checkbox"]:checked~.form__checkbox-icon {
   border: none;
 
   cursor: pointer;
+
+  @include vp-767 {
+    top: 14px;
+    right: 12px;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
 }
