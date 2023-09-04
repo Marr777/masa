@@ -21,8 +21,6 @@ export class Accordions {
 
     evt.preventDefault();
     const parent = target.closest('[data-accordion="parent"]');
-    const btn = target.closest('[data-accordion="button"]');
-    const wrapper = target.closest('[data-accordion="wrapper"]');
 
     if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
       return;
@@ -30,10 +28,10 @@ export class Accordions {
 
     const element = target.closest('[data-accordion="element"]');
     if (element.classList.contains('is-active')) {
-      this.closeAccordion(element, btn, wrapper);
+      this.closeAccordion(element);
       return;
     }
-    this.openAccordion(element, btn, wrapper);
+    this.openAccordion(element);
   }
 
   _windowResizeHandler() {
@@ -110,8 +108,10 @@ export class Accordions {
     this.updateAccordionsHeight();
   }
 
-  openAccordion(element, btn, wrapper, transition = true) {
+  openAccordion(element, transition = true) {
     const parentElement = element.closest('[data-accordion="parent"]');
+    const wrapper = element.querySelector('[data-accordion="wrapper"]');
+    const btn = element.querySelector('[data-accordion="button"]');
     const contentElement = element.querySelector('[data-accordion="content"]');
     this._openHeight += contentElement.scrollHeight;
 
@@ -144,8 +144,10 @@ export class Accordions {
     this._openHeight = 0;
   }
 
-  closeAccordion(element, btn, wrapper, transition = true) {
+  closeAccordion(element, transition = true) {
     const contentElement = element.querySelector('[data-accordion="content"]');
+    const wrapper = element.querySelector('[data-accordion="wrapper"]');
+    const btn = element.querySelector('[data-accordion="button"]');
     if (!contentElement) {
       return;
     }
