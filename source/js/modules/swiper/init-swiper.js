@@ -97,10 +97,52 @@ export const initSwiper = () => {
     },
   });
 
+  const feedbackSwiper = new Swiper('.feedback__swiper', {
+    keyboard: true,
+    wrapperClass: 'swiper__wrapper',
+    slideClass: 'swiper__slide',
+
+    scrollbar: {
+      el: '.feedback__scrollbar',
+      draggable: true,
+      hide: false,
+    },
+
+    breakpoints: {
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+        scrollbar: {
+          gragsize: 392,
+        },
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        scrollbar: {
+          gragsize: 324,
+        },
+      },
+      320: {
+        slidesPerView: 1,
+        scrollbar: {
+          el: '',
+          enabled: false,
+        },
+      },
+    },
+
+    navigation: {
+      nextEl: '.feedback__swiper-btn--next',
+      prevEl: '.feedback__swiper-btn--prev',
+    },
+  });
+
 
   heroSwiper.enable();
   programsSwiper.enable();
   newsSwiper.enable();
+  feedbackSwiper.enable();
 };
 
 

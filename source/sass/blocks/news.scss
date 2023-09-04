@@ -166,6 +166,10 @@
 
     border-radius: 12px;
 
+    @include vp-1441 {
+      min-height: 399px;
+    }
+
     @include vp-1199 {
       min-height: unset;
       height: 100%;
