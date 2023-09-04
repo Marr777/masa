@@ -1,12 +1,15 @@
 .feedback {
   padding-top: 128px;
+  padding-bottom: 116px;
 
   @include vp-1199 {
     padding-top: 99px;
+    padding-bottom: 96px;
   }
 
   @include vp-767 {
     padding-top: 65px;
+    padding-bottom: 35px;
   }
 }
 
@@ -41,7 +44,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-top: 1px;
+  padding: 1px;
   padding-bottom: 32px;
   grid-column: 1/-1;
 
