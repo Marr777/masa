@@ -230,7 +230,9 @@
 
   &--primary {
     label {
-      gap: 13px;
+      @include vp-767 {
+        gap: 13px;
+      }
     }
 
     input {
