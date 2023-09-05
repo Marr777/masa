@@ -2,9 +2,9 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Маса: совместный проект правительства Израиля и Еврейского агентства Сохнут.">
   <title>Маса</title>
   <link rel="stylesheet" href="css/style.min.css">
@@ -25,8 +25,7 @@
             <img src="img/logo.svg" width="52" height="52" alt="Логотип компании Маса.">
           </a>
           <nav class="header__nav" data-accordion="element" data-header="header-inner">
-            <button class="header__burger btn btn--primary" type="button" aria-label="Открыть меню."
-              data-accordion="button" data-header="header-btn">
+            <button class="header__burger btn btn--primary" type="button" aria-label="Открыть меню." data-header="header-btn">
               <span>Меню</span>
               <span class="header__burger-icon btn__icon">
                 <span class="header__burger-line"></span>
@@ -34,12 +33,12 @@
             </button>
             <div class="header__nav-inner header__nav-inner--closed" data-accordion="content"
               data-header="header-content">
-              <ul data-accordion="parent">
+              <ul data-header="header-list" data-accordion="parent">
                 <li>
-                  <a href="#about">О проекте</a>
+                  <a class="header__nav-link" href="#about">О проекте</a>
                 </li>
-                <li data-accordion="element">
-                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню." data-accordion="button">
+                <li data-header="dropdown-button" data-accordion="element">
+                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню.">
                     <span>Программы</span>
                     <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#arrow-down" />
@@ -48,28 +47,28 @@
                   <div class="header__nav-dropdown" data-accordion="content">
                     <ul>
                       <li>
-                        <a href="#programs">Стажировки</a>
+                        <a class="header__nav-link" href="#programs">Стажировки</a>
                       </li>
                       <li>
-                        <a href="#programs">Волонтёрство</a>
+                        <a class="header__nav-link" href="#programs">Волонтёрство</a>
                       </li>
                       <li>
-                        <a href="#programs">Учёба</a>
+                        <a class="header__nav-link" href="#programs">Учёба</a>
                       </li>
                       <li>
-                        <a href="#programs">Религия</a>
+                        <a class="header__nav-link" href="#programs">Религия</a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <a href="#depart">Как поехать</a>
+                  <a class="header__nav-link" href="#depart">Как поехать</a>
                 </li>
                 <li>
-                  <a href="#feedback">Отзывы</a>
+                  <a class="header__nav-link" href="#feedback">Отзывы</a>
                 </li>
-                <li data-accordion="element">
-                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню." data-accordion="button">
+                <li data-header="dropdown-button" data-accordion="element">
+                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню.">
                     <span>Новости</span>
                     <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#arrow-down" />
@@ -78,25 +77,25 @@
                   <div class="header__nav-dropdown" data-accordion="content">
                     <ul>
                       <li>
-                        <a href="#news">Общее</a>
+                        <a class="header__nav-link" href="#news">Общее</a>
                       </li>
                       <li>
-                        <a href="#news">Волонтёрство</a>
+                        <a class="header__nav-link" href="#news">Волонтёрство</a>
                       </li>
                       <li>
-                        <a href="#news">Стажировки</a>
+                        <a class="header__nav-link" href="#news">Стажировки</a>
                       </li>
                       <li>
-                        <a href="#news">Карьера</a>
+                        <a class="header__nav-link" href="#news">Карьера</a>
                       </li>
                       <li>
-                        <a href="#news">Путешествия</a>
+                        <a class="header__nav-link" href="#news">Путешествия</a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <a href="#contacts">Контакты</a>
+                  <a class="header__nav-link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -1021,7 +1020,9 @@
               </li>
             </ul>
           </div>
-          <div class="contacts__map" aria-label="Карта расположения офиса компании." id="map"></div>
+          <div class="contacts__map" id="map">
+            <span class="visually-hidden">Карта расположения офиса компании.</span>
+          </div>
         </div>
       </section>
 
@@ -1112,7 +1113,7 @@
             <img src="img/logo.svg" width="52" height="52" alt="Логотип компании Маса.">
           </a>
           <div class="footer__nav">
-            <ul>
+            <ul  aria-label="Навигация по сайту.">
               <li>
                 <a href="#about" class="footer__nav-link">О&nbsp;проекте</a>
               </li>
@@ -1134,7 +1135,7 @@
             </ul>
           </div>
           <div class="footer__socials">
-            <ul>
+            <ul aria-label="Список ссылок на наши социальные сети.">
               <li>
                 <a href="#" class="footer__social-link" aria-label="Страница Вконтакте.">
                   <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">

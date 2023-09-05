@@ -120,7 +120,9 @@ export class Accordions {
     }
 
     element.classList.add('is-active');
-    btn.classList.add('is-active');
+    if (btn) {
+      btn.classList.add('is-active');
+    }
     if (wrapper) {
       wrapper.classList.add('is-active');
     }
@@ -153,7 +155,9 @@ export class Accordions {
     }
 
     element.classList.remove('is-active');
-    btn.classList.remove('is-active');
+    if (btn) {
+      btn.classList.remove('is-active');
+    }
     if (wrapper) {
       wrapper.classList.remove('is-active');
     }
