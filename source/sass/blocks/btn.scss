@@ -209,6 +209,7 @@
     &:focus,
     &:focus-visible {
       background-color: $color-default-white;
+      outline: none;
     }
 
     &:disabled {
@@ -224,9 +225,9 @@
     transform: rotate(180deg);
   }
 
-  // &:disabled {
-  //   pointer-events: none;
-  // }
+  &:disabled {
+    pointer-events: none;
+  }
 }
 
 .btn__icon {

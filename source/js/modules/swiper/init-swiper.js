@@ -11,9 +11,10 @@ export const initSwiper = () => {
     },
     keyboard: true,
     loop: true,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
+    focusableElements: 'a, button',
 
     wrapperClass: 'swiper__wrapper',
     slideClass: 'swiper__slide',
@@ -142,12 +143,26 @@ export const initSwiper = () => {
   newsSwiper.enable();
   feedbackSwiper.enable();
 
-  const heroSlides = document.querySelectorAll('.hero__slide');
+  const heroSlider = document.querySelector('.hero__slides');
+  const heroSlides = heroSlider.querySelectorAll('.hero__slide');
+  // const aboutSection = document.querySelector('#about');
 
+  // heroSlider.addEventListener('focus', () => {
+  //   heroSwiper.pause();
+  //   heroSwiper.slideTo(0, 300, true);
+  // });
+
+  // aboutSection.addEventListener('focus', () => {
+  //   heroSwiper.resume();
+  // });
 
   heroSlides.forEach((slide) => {
     if (!slide.classList.contains('swiper-slide-duplicate')) {
       slide.setAttribute('tabindex', 0);
+      const slideIndex = Number(slide.getAttribute('aria-label')[0]) - 1;
+      slide.addEventListener('focus', () => {
+        heroSwiper.slideTo(slideIndex, 300, true);
+      });
     } else {
       const pagination = slide.querySelector('.hero__pagination');
       const button = slide.querySelector('.hero__slide-btn');
@@ -156,37 +171,3 @@ export const initSwiper = () => {
     }
   });
 };
-
-
-// const header = document.querySelector('.header');
-// const hero = document.querySelector('.hero');
-// const heroSlide = hero.querySelectorAll('.hero__slide');
-
-
-// const setMargin = () => {
-//   if (!header.classList.contains('header--open')) {
-//     hero.style.marginTop = `-${header.offsetHeight}px`;
-//     heroSlide.forEach((slide) => {
-//       slide.style.paddingTop = `${header.offsetHeight}px`;
-//     });
-//   }
-// };
-
-// const observeMutations = () => {
-//   const target = new MutationObserver(setMargin);
-
-//   target.observe(header, {
-//     childList: true,
-//     subtree: true,
-//   });
-// };
-
-// export const initHeroMargin = () => {
-//   if (!header.classList.contains('header--open')) {
-//     observeMutations();
-//     setMargin();
-//     window.addEventListener('resize', () => {
-//       setMargin();
-//     });
-//   }
-// };

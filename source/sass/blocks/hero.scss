@@ -15,7 +15,7 @@
   display: flex;
   align-items: end;
 
-  background-color: $color-disabled;
+  background-color: $picture-overlay;
 
   @media (min-width: 1440px) {
     min-height: 55.56vw;
@@ -36,16 +36,13 @@
   img {
     position: absolute;
     top: 0;
+    z-index: -1;
+
     width: 100%;
     height: auto;
     min-height: 100%;
     object-fit: cover;
   }
-}
-
-.hero__slide-inner {
-  position: relative;
-  z-index: 2;
 }
 
 .hero__pagination {
@@ -88,14 +85,17 @@
 
   @include hover {
     border-color: $color-primary-darker;
+    outline: none;
 
     &:active {
       background-color: $color-primary;
+      outline: none;
     }
   }
 
   &:active {
     background-color: $color-primary;
+    outline: none;
   }
 
   &:focus,
@@ -105,6 +105,9 @@
 }
 
 .hero__slide-inner {
+  position: relative;
+  z-index: 2;
+
   h3 {
     padding: 41px 50px 30px;
     margin: 0;
