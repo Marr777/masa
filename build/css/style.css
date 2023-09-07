@@ -4221,6 +4221,10 @@ li.is-active > .header__dropdown-btn svg {
   color: #ffffff;
   background-color: #316dc2;
 }
+.form__select-item[aria-selected=true] {
+  color: #ffffff;
+  background-color: #316dc2;
+}
 
 .form__checkbox {
   margin-bottom: 14px;

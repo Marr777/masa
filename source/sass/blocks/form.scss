@@ -461,6 +461,11 @@
     color: $color-default-white;
     background-color: $color-primary;
   }
+
+  &[aria-selected="true"] {
+    color: $color-default-white;
+    background-color: $color-primary;
+  }
 }
 
 .form__checkbox {
