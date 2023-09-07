@@ -32,7 +32,6 @@
   margin-bottom: 40px;
 
   ul {
-    margin: 0;
     padding: 0;
     display: flex;
     gap: 30px;
@@ -100,7 +99,7 @@
   }
 
   &:focus,
-  &::focus-visible {
+  &:focus-visible {
     color: $color-primary;
   }
 
@@ -181,6 +180,7 @@
     padding-right: 45px;
 
     border-radius: 12px;
+    background-color: $color-disabled;
 
     @include vp-1441 {
       min-height: 399px;
@@ -202,7 +202,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
 
     width: 100%;
     height: auto;
@@ -264,14 +263,14 @@
     color: $color-primary;
 
     background-color: $color-light;
-    border-radius: 0px 12px 0px 0px;
+    border-radius: 0 12px 0 0;
 
     &::after {
       background-color: $color-light;
     }
 
     @include vp-1199 {
-      padding: 9px 12px 0px 0;
+      padding: 9px 12px 0 0;
       min-height: 27px;
     }
 
@@ -303,7 +302,7 @@
     color: $color-primary;
 
     background-color: $color-light;
-    border-radius: 0px 12px 0px 0px;
+    border-radius: 0 12px 0 0;
 
     &::after {
       background-color: $color-light;
@@ -335,7 +334,7 @@
         height: 16px;
       }
 
-      &>br {
+      & > br {
         display: block;
       }
     }
@@ -383,7 +382,7 @@
   width: 240px;
   width: 100%;
 
-  border-radius: 0px 12px;
+  border-radius: 0 12px;
   background-color: $color-light;
 
   &--big {

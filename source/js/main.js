@@ -22,8 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const select = new CustomSelect();
     select.init();
     const form = new Form();
-    window.form = form;
+    if (window.form) {
+      window.form = form;
+    }
     form.init();
   });
 });
-

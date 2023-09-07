@@ -98,6 +98,8 @@
     left: 100px;
     height: 100%;
 
+    background-color: $color-primary;
+
     @include vp-1199 {
       left: 45px;
       width: calc(100% - 90px);
@@ -246,8 +248,8 @@
       }
 
       &:disabled {
-        border: 1px solid rgba(169, 175, 183, 0.50);
-        background-color: rgba(169, 175, 183, 0.20);
+        border: 1px solid rgba(169, 175, 183, 0.5);
+        background-color: rgba(169, 175, 183, 0.2);
       }
     }
   }
@@ -285,7 +287,7 @@
       &:disabled {
         border: 1px solid $color-default-white;
         opacity: 0.4;
-        background-color: rgba(255, 255, 255, 0.20);
+        background-color: rgba(255, 255, 255, 0.2);
       }
     }
 
@@ -302,7 +304,7 @@
   &.is-invalid {
     input {
       border: 1px solid $color-error;
-      background-color: rgba(255, 94, 102, 0.20);
+      background-color: rgba(255, 94, 102, 0.2);
     }
   }
 }
@@ -500,7 +502,7 @@
     .form__checkbox-icon {
       border: 1px solid $color-error;
       opacity: 0.7;
-      background: rgba(255, 94, 102, 0.20);
+      background: rgba(255, 94, 102, 0.2);
     }
   }
 }
@@ -574,13 +576,13 @@
 
     &:disabled {
       border: 1px solid $color-default-white;
-      background-color: rgba(255, 255, 255, 0.60);
+      background-color: rgba(255, 255, 255, 0.6);
       pointer-events: none;
     }
   }
 }
 
-input[type="checkbox"]:checked~.form__checkbox-icon {
+input[type="checkbox"]:checked ~ .form__checkbox-icon {
   background-color: $color-primary;
 
   &::after {
@@ -616,7 +618,7 @@ input[type="checkbox"]:checked~.form__checkbox-icon {
   }
 }
 
-input[type="checkbox"]:checked~.form__checkbox-icon--primary {
+input[type="checkbox"]:checked ~ .form__checkbox-icon--primary {
   background-color: $color-default-white;
 
   &::after {

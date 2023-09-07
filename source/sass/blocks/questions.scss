@@ -38,7 +38,7 @@
   }
 
   li.is-active {
-    &>.questions__item {
+    & > .questions__item {
       padding: 41px 40px 15px;
 
       background-color: $color-primary;
@@ -214,6 +214,7 @@
   display: grid;
   grid-template-columns: auto min-content;
   justify-content: space-between;
+  column-gap: 200px;
 
 
   h3 {
@@ -246,8 +247,13 @@
     }
   }
 
+  @include vp-1199 {
+    column-gap: 30px;
+  }
+
   @include vp-767 {
     align-items: center;
+    column-gap: 3px;
   }
 }
 

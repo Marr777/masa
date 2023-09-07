@@ -96,6 +96,7 @@
   justify-content: flex-end;
 
   border-radius: 12px;
+  background-color: $color-disabled;
 
   picture,
   img {
@@ -140,7 +141,7 @@
     line-height: 26px;
     color: $color-primary;
 
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 12px 12px 0 0;
     background-color: $color-default-white;
 
     @include vp-1199 {
@@ -196,7 +197,7 @@
   align-items: center;
   gap: 16px;
 
-  border-radius: 0px 12px 12px 12px;
+  border-radius: 0 12px 12px 12px;
   background-color: $color-default-white;
 
   @include vp-1199 {

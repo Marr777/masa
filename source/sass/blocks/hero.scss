@@ -15,6 +15,8 @@
   display: flex;
   align-items: end;
 
+  background-color: $color-disabled;
+
   @media (min-width: 1440px) {
     min-height: 55.56vw;
   }
@@ -34,12 +36,16 @@
   img {
     position: absolute;
     top: 0;
-    z-index: -1;
     width: 100%;
     height: auto;
     min-height: 100%;
     object-fit: cover;
   }
+}
+
+.hero__slide-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .hero__pagination {
@@ -211,7 +217,7 @@
     @include vp-767 {
       @include angle;
 
-      padding: 0px 14px 10px;
+      padding: 0 14px 10px;
       width: 90%;
       margin-top: -3px;
 
@@ -238,7 +244,7 @@
     }
 
     @include vp-1199 {
-      padding: 0px 40px 34px;
+      padding: 0 40px 34px;
       align-items: flex-start;
 
       p {
@@ -250,7 +256,7 @@
       padding: 0;
 
       p {
-        padding: 0px 14px 11px;
+        padding: 0 14px 11px;
       }
     }
   }

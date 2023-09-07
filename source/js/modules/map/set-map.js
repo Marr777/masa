@@ -41,4 +41,3 @@ export const setMap = () => {
   changeMarker();
   window.addEventListener('resize', changeMarker);
 };
-
