@@ -63,6 +63,10 @@
 
   border: 1px solid $color-primary;
   border-radius: 50%;
+  background-color: $color-transparent;
+
+  transition: all $trans-default;
+  cursor: pointer;
 
   &--active {
     background-color: $color-primary;
@@ -71,6 +75,23 @@
   @include vp-767 {
     width: 8px;
     height: 8px;
+  }
+
+  @include hover {
+    border-color: $color-primary-darker;
+
+    &:active {
+      background-color: $color-primary;
+    }
+  }
+
+  &:active {
+    background-color: $color-primary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border-color: $color-primary-darker;
   }
 }
 

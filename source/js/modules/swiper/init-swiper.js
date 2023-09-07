@@ -143,6 +143,20 @@ export const initSwiper = () => {
   programsSwiper.enable();
   newsSwiper.enable();
   feedbackSwiper.enable();
+
+  const heroSlides = document.querySelectorAll('.hero__slide');
+
+
+  heroSlides.forEach((slide) => {
+    if (!slide.classList.contains('swiper-slide-duplicate')) {
+      slide.setAttribute('tabindex', 0);
+    } else {
+      const pagination = slide.querySelector('.hero__pagination');
+      const button = slide.querySelector('.hero__slide-btn');
+      pagination.setAttribute('inert', '');
+      button.setAttribute('tabindex', '-1');
+    }
+  });
 };
 
 

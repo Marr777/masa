@@ -32,8 +32,24 @@
 .footer__logo-link {
   width: fit-content;
 
+  transition: opacity $trans-default;
+
   @include vp-767 {
     margin: 0 auto;
+  }
+
+  @include hover {
+    opacity: 0.7;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &:active,
+  &:focus,
+  &::focus-visible {
+    opacity: 0.7;
   }
 }
 
@@ -74,6 +90,29 @@
   }
 }
 
+.footer__nav-link {
+  transition: color $trans-default;
+
+  @include hover {
+    color: $color-primary;
+
+    &:active {
+      color: $color-primary-darker;
+    }
+  }
+
+  &:active {
+    color: $color-primary-darker;
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: $color-primary;
+
+    outline: none;
+  }
+}
+
 .footer__socials {
   justify-self: end;
 
@@ -109,9 +148,12 @@
   border-radius: 50%;
   background-color: $color-primary;
 
+  transition: background-color $trans-default;
+
   svg {
     fill: $color-default-white;
-    transition: fill $trans-default;
+    opacity: 1;
+    transition: fill $trans-default, opacity $trans-default;
 
     @include vp-767 {
       width: 12px;
@@ -122,6 +164,37 @@
   @include vp-767 {
     width: 26px;
     height: 26px;
+  }
+
+  @include hover {
+    svg {
+      opacity: 0.7;
+    }
+
+    &:active {
+      background-color: $color-primary-darker;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:active {
+    background-color: $color-primary-darker;
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
+    svg {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -145,7 +218,7 @@
   }
 
   p,
-  b {
+  a {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -160,8 +233,29 @@
     margin: 0;
   }
 
-  b {
+  a {
     text-decoration: underline;
     text-underline-offset: 4px;
+
+    transition: color $trans-default;
+
+    @include hover {
+      color: $color-primary;
+
+      &:active {
+        color: $color-primary-darker;
+      }
+    }
+
+    &:active {
+      color: $color-primary-darker;
+    }
+
+    &:focus,
+    &:focus-visible {
+      color: $color-primary;
+
+      outline: none;
+    }
   }
 }

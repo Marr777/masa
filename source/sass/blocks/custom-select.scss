@@ -73,19 +73,6 @@
     cursor: pointer;
 
     transition: border 0.3s ease;
-
-    &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
-    }
-
-    &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
-    }
-
-    &:disabled {
-      pointer-events: none;
-      opacity: 0.3;
-    }
   }
 
   &__list {
@@ -121,25 +108,9 @@
     &[aria-selected="true"] {
       background-color: rgba(0, 0, 0, 0.2);
 
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-
       &.focus-visible:focus {
         background-color: rgba(0, 0, 0, 0.2);
       }
-    }
-
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-    }
-
-    &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
     }
   }
 
@@ -251,17 +222,6 @@
       }
     }
   }
-
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
 
   &--placeholder {
     .custom-select__label {

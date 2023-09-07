@@ -26,7 +26,7 @@ $fz-default: 16px;
 $ff-manrope: "Manrope", "Arial", sans-serif;
 
 // Animation
-$tf-default: ease;
+$tf-default: ease-in;
 $trans-default: 0.3s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой

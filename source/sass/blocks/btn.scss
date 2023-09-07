@@ -29,9 +29,57 @@
     color: $color-primary;
 
     box-shadow: 0 0 0 1px $color-primary inset;
+    background-color: $color-transparent;
 
     .btn__icon {
       background-color: $color-primary;
+    }
+
+    @include hover {
+      color: $color-default-white;
+
+      background-color: $color-primary;
+
+      .btn__icon {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        stroke: $color-primary;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.7);
+
+      background-color: $color-primary;
+
+      .btn__icon {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        stroke: $color-primary;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      color: $color-default-white;
+
+      background-color: $color-primary;
+
+      .btn__icon {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        stroke: $color-primary;
+      }
     }
   }
 
@@ -43,18 +91,132 @@
     .btn__icon {
       background-color: $color-default-white;
     }
+
+    @include hover {
+      color: $color-primary;
+
+      background-color: $color-default-white;
+
+      .btn__icon {
+        background-color: $color-primary;
+      }
+
+      svg {
+        stroke: $color-default-white;
+      }
+
+      &:active {
+        color: rgba(49, 109, 194, 0.7);
+      }
+    }
+
+    &:active {
+      color: rgba(49, 109, 194, 0.7);
+
+      background-color: $color-default-white;
+
+      .btn__icon {
+        background-color: $color-primary;
+      }
+
+      svg {
+        stroke: $color-default-white;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      color: $color-primary;
+
+      background-color: $color-default-white;
+
+      .btn__icon {
+        background-color: $color-primary;
+      }
+
+      svg {
+        stroke: $color-default-white;
+      }
+    }
+  }
+
+  &--primary,
+  &--secondary {
+    transition: all $trans-default;
+
+    @include hover {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:active {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:disabled {
+      outline: $color-disabled;
+
+      .btn__icon {
+        background-color: $color-disabled;
+      }
+    }
   }
 
   &--swiper {
-    padding: 6px;
+    padding: 0;
     justify-content: center;
+    width: 22px;
+    height: 22px;
 
     border: none;
-    border-radius: 0%;
+    border-radius: 50%;
     background-color: $color-transparent;
 
-    @include vp-767 {
-      padding: 5px;
+    transition: all $trans-default;
+
+    svg {
+      stroke: $color-primary;
+    }
+
+    @include hover {
+      background-color: $color-default-white;
+
+      &:active {
+        svg {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 0.7;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: $color-default-white;
+    }
+
+    &:disabled {
+      pointer-events: none;
+
+      svg {
+        stroke: $color-disabled;
+      }
     }
   }
 
@@ -62,15 +224,9 @@
     transform: rotate(180deg);
   }
 
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  // &:disabled {
+  //   pointer-events: none;
+  // }
 }
 
 .btn__icon {
@@ -84,6 +240,8 @@
 
   border-radius: 50%;
 
+  transition: all $trans-default;
+
   @include vp-767 {
     width: 34px;
     height: 34px;
@@ -92,6 +250,9 @@
 
   svg {
     stroke: $color-default-white;
+    transform: rotate(0);
+
+    transition: transform $trans-default, stroke $trans-default;
   }
 
   &--secondary {

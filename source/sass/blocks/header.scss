@@ -7,7 +7,7 @@
 
   background-color: $color-transparent;
 
-  transition: background-color $trans-default, height 1s;
+  transition: background-color 1s, height 1s;
 
   @include vp-1199 {
     padding-top: 29px;
@@ -33,6 +33,20 @@
 
 .header__logo-link {
   transition: all $trans-default;
+
+  @include hover {
+    opacity: 0.7;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &:active,
+  &:focus,
+  &::focus-visible {
+    opacity: 0.7;
+  }
 }
 
 .header__wrapper {
@@ -62,6 +76,30 @@
   }
 }
 
+.header__nav-link {
+  transition: color $trans-default;
+
+  @include hover {
+    color: $color-default-white;
+
+    &:active {
+      color: $color-default-white;
+    }
+  }
+
+  &:active {
+    color: $color-default-white;
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: $color-default-white;
+
+    outline: none;
+  }
+
+
+}
 
 .header__burger {
   padding-left: 20px;
@@ -76,6 +114,42 @@
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;
+  }
+
+  @include hover {
+    .header__burger-icon::after,
+    .header__burger-icon::before,
+    .header__burger-line {
+      background-color: $color-primary;
+    }
+
+    &:active {
+      .header__burger-icon::after,
+      .header__burger-icon::before,
+      .header__burger-line {
+        background-color: $color-primary;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:active {
+    .header__burger-icon::after,
+    .header__burger-icon::before,
+    .header__burger-line {
+      background-color: $color-primary;
+      opacity: 0.7;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    .header__burger-icon::after,
+    .header__burger-icon::before,
+    .header__burger-line {
+      background-color: $color-primary;
+      opacity: 0.7;
+    }
   }
 
   &--open {
@@ -131,7 +205,6 @@
 
 
 .header__burger-icon--open {
-
   &::after,
   &::before {
     position: absolute;
@@ -151,11 +224,14 @@
   .header__burger-line {
     transform: translateY(-20px);
     opacity: 0;
+    width: 0;
   }
 }
 
 .header__nav-inner {
   width: 100%;
+
+  cursor: default;
 
   ul {
     width: 100%;
@@ -229,13 +305,32 @@
   background-color: transparent;
   border: none;
 
+  cursor: pointer;
+  transition: color $trans-default;
+
   svg {
     transform: scaleY(-1);
 
     transition: transform $trans-default;
   }
+
+  @include hover {
+    color: $color-default-white;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    color: $color-default-white;
+
+    outline: none;
+  }
 }
 
-li.is-active>.header__dropdown-btn svg {
-  transform: scaleY(1);
+li.is-active > .header__dropdown-btn {
+  color: $color-default-white;
+
+  svg {
+    transform: scaleY(1);
+  }
 }

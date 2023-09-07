@@ -71,6 +71,7 @@
   background-color: $color-transparent;
 
   transition: background-color 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+  cursor: pointer;
 
   @include vp-1199 {
     padding: 28px 30px 28px;
@@ -80,6 +81,132 @@
   @include vp-767 {
     padding: 20px 15px;
     min-height: 79px;
+  }
+
+  @include hover {
+    background-color: $color-default-white;
+
+    button {
+      background-color: transparent;
+      outline: 1px solid $color-primary;
+
+      &::after,
+      &::before {
+        background-color: $color-primary;
+      }
+    }
+
+    &:active {
+      color: $color-primary-darker;
+
+      button {
+        background-color: $color-primary-darker;
+        outline: none;
+
+        &::after,
+        &::before {
+          background-color: $color-default-white;
+        }
+      }
+    }
+  }
+
+  &:active {
+    color: $color-primary-darker;
+
+    button {
+      background-color: $color-primary-darker;
+      outline: none;
+
+      &::after,
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $color-default-white;
+
+    button {
+      background-color: transparent;
+      outline: 1px solid $color-primary;
+
+      &::after,
+      &::before {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  &.is-active {
+    @include hover {
+      background-color: $color-primary;
+
+      button {
+        background-color: transparent;
+        outline: 1px solid $color-default-white;
+
+        &::before {
+          background-color: $color-default-white;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+
+      &:active {
+        background-color: $color-primary-darker;
+
+        button {
+          background-color: $color-default-white;
+
+          &::before {
+            background-color: $color-primary-darker;
+          }
+
+          &::after {
+            background-color: $color-transparent;
+          }
+        }
+      }
+    }
+
+    &:active {
+      background-color: $color-primary-darker;
+
+      button {
+        background-color: $color-default-white;
+
+        &::before {
+          background-color: $color-primary-darker;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: $color-primary;
+
+      button {
+        background-color: transparent;
+        outline: 1px solid $color-default-white;
+
+        &::before {
+          background-color: $color-default-white;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+    }
   }
 }
 
@@ -137,7 +264,8 @@
   border: none;
   border-radius: 50%;
 
-  transition: background-color $trans-default;
+  transition: background-color 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+  cursor: pointer;
 
   &::after,
   &::before {
@@ -146,7 +274,7 @@
 
     background-color: $color-default-white;
 
-    transition: background-color $trans-default;
+    transition: background-color 0.5s cubic-bezier(0.37, 0, 0.63, 1);
   }
 
   &::after {
@@ -159,6 +287,54 @@
     height: 1px;
   }
 
+  @include hover {
+    background-color: transparent;
+    outline: 1px solid $color-primary;
+
+    &::after,
+    &::before {
+      background-color: $color-primary;
+    }
+
+    &:active {
+      background-color: $color-primary-darker;
+
+      &::after,
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &:active {
+    background-color: $color-primary-darker;
+
+    &::after,
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: transparent;
+    outline: 1px solid $color-primary;
+
+    &::after,
+    &::before {
+      background-color: $color-primary;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+
+    &::after,
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+
   &.is-active {
     background-color: $color-default-white;
 
@@ -168,6 +344,57 @@
 
     &::before {
       background-color: $color-primary;
+    }
+
+    @include hover {
+      background-color: transparent;
+      outline: 1px solid $color-default-white;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-color: $color-transparent;
+      }
+
+      &:active {
+        background-color: $color-default-white;
+
+        &::before {
+          background-color: $color-primary-darker;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+
+      &::before {
+        background-color: $color-primary-darker;
+      }
+
+      &::after {
+        background-color: $color-transparent;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: transparent;
+      outline: 1px solid $color-default-white;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-color: $color-transparent;
+      }
     }
   }
 }

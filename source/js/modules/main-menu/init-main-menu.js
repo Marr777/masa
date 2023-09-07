@@ -1,4 +1,4 @@
-import { Accordions } from "../accordions/accordions";
+import {Accordions} from '../accordions/accordions';
 
 const body = document.body;
 const header = document.querySelector('[data-header="header"]');
@@ -8,12 +8,21 @@ const burgerBtn = header.querySelector('[data-header="header-btn"]');
 const burgerIcon = burgerBtn.querySelector('.header__burger-icon');
 const headerContent = header.querySelector('[data-header="header-content"]');
 const dropDownBtns = document.querySelectorAll('[data-header="dropdown-button"]');
+const navLinks = header.querySelectorAll('[data-header="header-link"]');
+const navItems = header.querySelectorAll('[data-header="dropdown-item"]');
+const dropdownLinks = header.querySelectorAll('[data-header="header-link-secondary"]');
 
 const openMenu = () => {
   const accordions = new Accordions();
   header.classList.add('header--open');
   header.dataset.accordion = 'header-button';
   headerInner.classList.add('header__nav--open');
+  navItems.forEach((item) => {
+    item.setAttribute('tabindex', '0');
+  });
+  navLinks.forEach((link) => {
+    link.setAttribute('tabindex', '0');
+  });
   burgerBtn.classList.add('header__burger--open');
   burgerIcon.classList.add('header__burger-icon--open');
   headerContent.classList.remove('header__nav-inner--closed');
@@ -25,8 +34,16 @@ const openMenu = () => {
 
 const closeMenu = () => {
   const accordions = new Accordions();
-  header.classList.remove('header--open');
+  setTimeout(() => {
+    header.classList.remove('header--open');
+  }, '380');
   headerInner.classList.remove('header__nav--open');
+  navItems.forEach((item) => {
+    item.setAttribute('tabindex', '-1');
+  });
+  navLinks.forEach((link) => {
+    link.setAttribute('tabindex', '-1');
+  });
   burgerBtn.classList.remove('header__burger--open');
   burgerIcon.classList.remove('header__burger-icon--open');
   headerContent.classList.add('header__nav-inner--closed');
@@ -56,44 +73,46 @@ const onOverlayClick = (evt) => {
   }
 };
 
-// const openDropdownMenu = (btn) => {
-//   const accordions = new Accordions();
-//   accordions.openAccordion(btn);
-// };
-
-// const closeDropdownMenu = (btn) => {
-//   const accordions = new Accordions();
-//   accordions.closeAccordion(btn);
-// };
-
-
-// const setDropdownMenu = (item) => {
-//   if (item.classList.contains('is-active')) {
-//     closeDropdownMenu(item);
-//   } else {
-//     openDropdownMenu(item);
-//   }
-// };
-
 const initDropdownClick = () => {
   dropDownBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       const accordions = new Accordions();
+      const links = btn.querySelectorAll('[data-header="header-link-secondary"]');
       if (btn.classList.contains('is-active')) {
         setTimeout(() => {
           accordions.closeAccordion(btn);
         }, '50');
+        links.forEach((link) => {
+          link.setAttribute('tabindex', '-1');
+        });
       } else {
         setTimeout(() => {
           accordions.openAccordion(btn);
         }, '50');
+        links.forEach((link) => {
+          link.setAttribute('tabindex', '0');
+        });
       }
     });
   });
 };
 
 export const initMainMenu = () => {
+  navLinks.forEach((link) => {
+    link.setAttribute('tabindex', '-1');
+  });
+  dropdownLinks.forEach((link) => {
+    link.setAttribute('tabindex', '-1');
+  });
   burgerBtn.addEventListener('click', onBurgerBtnClick);
   header.addEventListener('click', onOverlayClick);
+  navLinks[navLinks.length - 1].addEventListener('blur', () => {
+    const accordions = new Accordions();
+    setTimeout(() => {
+      accordions.closeAccordion(headerInner);
+      accordions.closeAllAccordion(headerList);
+    }, '50');
+    closeMenu();
+  });
   initDropdownClick();
 };

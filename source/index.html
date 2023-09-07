@@ -35,10 +35,10 @@
               data-header="header-content">
               <ul data-header="header-list" data-accordion="parent">
                 <li>
-                  <a class="header__nav-link" href="#about">О проекте</a>
+                  <a class="header__nav-link" href="#about" data-header="header-link">О проекте</a>
                 </li>
                 <li data-header="dropdown-button" data-accordion="element">
-                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню.">
+                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню." data-header="dropdown-item">
                     <span>Программы</span>
                     <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#arrow-down" />
@@ -47,28 +47,28 @@
                   <div class="header__nav-dropdown" data-accordion="content">
                     <ul>
                       <li>
-                        <a class="header__nav-link" href="#programs">Стажировки</a>
+                        <a class="header__nav-link" href="#programs" data-header="header-link-secondary">Стажировки</a>
                       </li>
                       <li>
-                        <a class="header__nav-link" href="#programs">Волонтёрство</a>
+                        <a class="header__nav-link" href="#programs" data-header="header-link-secondary">Волонтёрство</a>
                       </li>
                       <li>
-                        <a class="header__nav-link" href="#programs">Учёба</a>
+                        <a class="header__nav-link" href="#programs" data-header="header-link-secondary">Учёба</a>
                       </li>
                       <li>
-                        <a class="header__nav-link" href="#programs">Религия</a>
+                        <a class="header__nav-link" href="#programs" data-header="header-link-secondary">Религия</a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <a class="header__nav-link" href="#depart">Как поехать</a>
+                  <a class="header__nav-link" href="#depart" data-header="header-link">Как поехать</a>
                 </li>
                 <li>
-                  <a class="header__nav-link" href="#feedback">Отзывы</a>
+                  <a class="header__nav-link" href="#feedback" data-header="header-link">Отзывы</a>
                 </li>
                 <li data-header="dropdown-button" data-accordion="element">
-                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню.">
+                  <button class="header__dropdown-btn" aria-label="Развернуть пункт меню." data-header="dropdown-item">
                     <span>Новости</span>
                     <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
                       <use href="img/sprite.svg#arrow-down" />
@@ -77,25 +77,25 @@
                   <div class="header__nav-dropdown" data-accordion="content">
                     <ul>
                       <li>
-                        <a class="header__nav-link" href="#news">Общее</a>
+                        <a class="header__nav-link" href="#news" data-header="header-link-secondary">Общее</a>
                       </li>
                       <li>
-                        <a class="header__nav-link" href="#news">Волонтёрство</a>
+                        <a class="header__nav-link" href="#news" data-header="header-link-secondary">Волонтёрство</a>
                       </li>
                       <li>
-                        <a class="header__nav-link" href="#news">Стажировки</a>
+                        <a class="header__nav-link" href="#news" data-header="header-link-secondary">Стажировки</a>
                       </li>
                       <li>
-                        <a class="header__nav-link" href="#news">Карьера</a>
+                        <a class="header__nav-link" href="#news" data-header="header-link-secondary">Карьера</a>
                       </li>
                       <li>
-                        <a class="header__nav-link" href="#news">Путешествия</a>
+                        <a class="header__nav-link" href="#news" data-header="header-link-secondary">Путешествия</a>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li>
-                  <a class="header__nav-link" href="#contacts">Контакты</a>
+                  <a class="header__nav-link" href="#contacts" data-header="header-link">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -110,7 +110,7 @@
         <h2 class="visually-hidden">Наши предложения.</h2>
         <div class="hero__swiper swiper">
           <ul class="hero__slides swiper__wrapper">
-            <li class="hero__slide swiper__slide">
+            <li class="hero__slide swiper__slide" tabindex="0">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/hero/slide1-mobile.webp 1x, img/hero/slide1-mobile@2x.webp 2x" width="320" height="568">
@@ -146,7 +146,7 @@
                 </div>
               </div>
             </li>
-            <li class="hero__slide swiper__slide">
+            <li class="hero__slide swiper__slide" tabindex="0">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/hero/slide2-mobile.webp 1x, img/hero/slide2-mobile@2x.webp 2x" width="320" height="568">
@@ -182,7 +182,7 @@
                 </div>
               </div>
             </li>
-            <li class="hero__slide swiper__slide">
+            <li class="hero__slide swiper__slide" tabindex="0">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/hero/slide3-mobile.webp 1x, img/hero/slide3-mobile@2x.webp 2x" width="320" height="568">
@@ -590,28 +590,28 @@
       <section class="news" id="news">
         <div class="container">
           <h2>Новости и материалы</h2>
-          <div class="news__buttons">
+          <div class="news__buttons" data-news="btn-container">
             <ul>
               <li>
-                <button class="news__button news__button--active" type="button">Общее</button>
+                <button class="news__button news__button--active" type="button" data-name="news-btn" data-filter="all">Общее</button>
               </li>
               <li>
-                <button class="news__button" type="button">Волонтёрство</button>
+                <button class="news__button" type="button" data-name="news-btn" data-filter="volunteering">Волонтёрство</button>
               </li>
               <li>
-                <button class="news__button" type="button">Стажировки</button>
+                <button class="news__button" type="button" data-name="news-btn" data-filter="intership">Стажировки</button>
               </li>
               <li>
-                <button class="news__button" type="button">Карьера</button>
+                <button class="news__button" type="button" data-name="news-btn" data-filter="career">Карьера</button>
               </li>
               <li>
-                <button class="news__button" type="button">Путешествия</button>
+                <button class="news__button" type="button" data-name="news-btn" data-filter="travel">Путешествия</button>
               </li>
             </ul>
           </div>
           <div class="news__swiper swiper">
             <ul class="swiper__wrapper">
-              <li class="news__item news__item--big swiper__slide">
+              <li class="news__item news__item--big swiper__slide" data-news="slide" data-filter="intership">
                 <article>
                   <picture>
                     <source type="image/webp" media="(max-width: 1199px)"
@@ -643,7 +643,7 @@
                   </div>
                 </article>
               </li>
-              <li class="news__item swiper__slide">
+              <li class="news__item swiper__slide" data-news="slide" data-filter="travel">
                 <article>
                   <picture>
                     <source type="image/webp" media="(max-width: 1199px)"
@@ -673,7 +673,7 @@
                   </div>
                 </article>
               </li>
-              <li class="news__item swiper__slide">
+              <li class="news__item swiper__slide" data-news="slide" data-filter="volunteering">
                 <article>
                   <picture>
                     <source type="image/webp" media="(max-width: 1199px)"
@@ -704,7 +704,7 @@
                   </div>
                 </article>
               </li>
-              <li class="news__item swiper__slide">
+              <li class="news__item swiper__slide" data-news="slide" data-filter="career">
                 <article>
                   <picture>
                     <source type="image/webp" media="(max-width: 1199px)"
@@ -758,7 +758,7 @@
           <h2>Вопросы и ответы</h2>
           <ul data-accordion="parent">
             <li data-accordion="element">
-              <div class="questions__item">
+              <div class="questions__item" data-accordion="item">
                 <div class="questions__item-wrapper" data-accordion="wrapper">
                   <h3>Кто&nbsp;организатор? Какие сроки у&nbsp;программы?</h3>
                   <button class="questions__accordion-btn" type="button" data-accordion="button"
@@ -774,7 +774,7 @@
               </div>
             </li>
             <li data-accordion="element">
-              <div class="questions__item">
+              <div class="questions__item" data-accordion="item">
                 <div class="questions__item-wrapper" data-accordion="wrapper">
                   <h3>Что такое грант на&nbsp;обучение?</h3>
                   <button class="questions__accordion-btn" type="button" data-accordion="button"
@@ -789,7 +789,7 @@
               </div>
             </li>
             <li data-accordion="element">
-              <div class="questions__item">
+              <div class="questions__item" data-accordion="item">
                 <div class="questions__item-wrapper" data-accordion="wrapper">
                   <h3>Как&nbsp;определяется стоимость программы?</h3>
                   <button class="questions__accordion-btn" type="button" data-accordion="button"
@@ -805,7 +805,7 @@
               </div>
             </li>
             <li data-accordion="element">
-              <div class="questions__item">
+              <div class="questions__item" data-accordion="item">
                 <div class="questions__item-wrapper" data-accordion="wrapper">
                   <h3>Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для&nbsp;дальнейшего обучения?</h3>
                   <button class="questions__accordion-btn" type="button" data-accordion="button"
@@ -824,7 +824,7 @@
               </div>
             </li>
             <li data-accordion="element">
-              <div class="questions__item">
+              <div class="questions__item" data-accordion="item">
                 <div class="questions__item-wrapper" data-accordion="wrapper">
                   <h3>Как выглядит полный процесс регистрации на&nbsp;программу &laquo;Маса&raquo;?</h3>
                   <button class="questions__accordion-btn" type="button" data-accordion="button"
@@ -1049,11 +1049,11 @@
                 <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="text">
                   <label>
                     <span>Ваше сообщение</span>
-                    <input type="text" name="message" required>
+                    <textarea name="message" id="message" required></textarea>
                   </label>
                 </div>
                 <div class="form__input-wrapper form__select form__select--primary custom-select" data-select="data-select"
-                  data-validate-type="select" data-name="city" data-id="city">
+                  data-validate-type="select" data-required="true" data-name="city" data-id="city">
                   <span>Выберите город</span>
                   <button class="form__select-btn form__select-btn--primary custom-select__button" type="button"
                     aria-label="Выберите город.">
@@ -1161,7 +1161,7 @@
           </div>
           <div class="footer__copyright">
             <p>Masa &copy;&nbsp;2023 Все права защищены</p>
-            <b>Политика конфиденциальности</b>
+            <a href="#">Политика конфиденциальности</a>
           </div>
         </div>
       </div>
@@ -1195,7 +1195,7 @@
               </label>
             </div>
             <div class="form__input-wrapper form__select custom-select" data-select="data-select"
-              data-validate-type="select" data-name="city" data-id="city">
+              data-validate-type="select" data-required="true" data-name="city" data-id="city">
               <span>Выберите город</span>
               <button class="form__select-btn form__select-btn--modal custom-select__button" type="button"
                 aria-label="Выберите город.">
