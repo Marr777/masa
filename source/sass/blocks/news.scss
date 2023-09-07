@@ -271,7 +271,7 @@
     }
 
     @include vp-1199 {
-      padding: 11px 12px 0 0;
+      padding: 9px 12px 0px 0;
       min-height: 27px;
     }
 
@@ -309,12 +309,12 @@
       background-color: $color-light;
     }
 
-    &>br {
+    & > br {
       display: none;
     }
 
     @include vp-1199 {
-      padding: 3px 7px 1px 0;
+      padding: 5px 7px 2px 0;
       width: 87%;
 
       font-size: 20px;
@@ -348,7 +348,7 @@
       max-width: 291px;
 
       @include vp-1199 {
-        padding: 9px 7px 2px 0;
+        padding: 5px 7px 2px 0;
         max-width: unset;
         width: 87%;
       }
@@ -407,6 +407,10 @@
     font-size: 14px;
     line-height: 18px;
 
+    @include vp-1199 {
+      line-height: 19px;
+    }
+
     @include vp-767 {
       font-size: 12px;
       line-height: 14px;
@@ -414,7 +418,7 @@
   }
 
   @include vp-1199 {
-    padding: 10px 17px 15px 0;
+    padding: 9px 17px 12px 0;
   }
 
   @include vp-767 {

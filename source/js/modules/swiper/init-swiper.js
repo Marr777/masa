@@ -105,6 +105,7 @@ export const initSwiper = () => {
     scrollbar: {
       el: '.feedback__scrollbar',
       draggable: true,
+      dragSize: 392,
       hide: false,
     },
 
@@ -112,15 +113,12 @@ export const initSwiper = () => {
       1200: {
         slidesPerView: 2,
         spaceBetween: 32,
-        scrollbar: {
-          gragsize: 392,
-        },
       },
       768: {
         slidesPerView: 'auto',
         spaceBetween: 30,
         scrollbar: {
-          gragsize: 324,
+          dragSize: 324,
         },
       },
       320: {

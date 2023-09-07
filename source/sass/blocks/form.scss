@@ -197,7 +197,6 @@
 
   input,
   textarea {
-    min-height: 50px;
     width: 100%;
     padding: 16px 25px;
 
@@ -209,10 +208,17 @@
     transition: outline $trans-default;
 
     @include vp-767 {
-      min-height: 35px;
       width: 100%;
       padding: 14px 25px;
       font-size: 12px;
+    }
+  }
+
+  input {
+    min-height: 50px;
+
+    @include vp-767 {
+      min-height: 35px;
     }
   }
 
@@ -253,16 +259,18 @@
       }
     }
 
+    input {
+      @include vp-767 {
+        min-height: 47px;
+      }
+    }
+
     input,
     textarea {
       color: $color-default-white;
 
       background-color: $color-transparent;
       outline: 1px solid rgba(255, 255, 255, 0.3);
-
-      @include vp-767 {
-        min-height: 47px;
-      }
 
       @include hover {
         outline: 1px solid $color-default-white;

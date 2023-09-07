@@ -10,13 +10,14 @@
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 52px auto auto;
+  grid-template-columns: 52px 75% auto;
   grid-template-rows: auto auto;
   column-gap: 52px;
   row-gap: 26px;
   align-items: center;
 
   @include vp-1199 {
+    grid-template-columns: 52px auto auto;
     column-gap: 98px;
     row-gap: 25px;
     justify-content: space-between;

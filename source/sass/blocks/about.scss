@@ -26,7 +26,7 @@
 
   @include vp-767 {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 }
 
@@ -172,7 +172,8 @@
 
   height: 100%;
   padding: 30px 4.1vw;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   gap: 12px;
   justify-content: space-between;
 
