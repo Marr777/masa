@@ -5770,7 +5770,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 }
 @media (max-width: 767px) {
   .questions {
-    padding-top: 10px;
+    padding-top: 4px;
   }
 }
 
