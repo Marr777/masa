@@ -7,6 +7,7 @@ import {initSwiper} from './modules/swiper/init-swiper';
 import {CustomSelect} from './modules/select/custom-select';
 import {initNewsBtns} from './modules/news/news';
 import {setMap} from './modules/map/set-map';
+import {initTitleBreak} from './modules/about-features/init-title-break';
 
 // ---------------------------------
 
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMainMenu();
     initSwiper();
     initNewsBtns();
+    initTitleBreak();
     setMap();
     const select = new CustomSelect();
     select.init();

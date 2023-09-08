@@ -83,7 +83,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
 
     width: 100%;
     height: 100%;
@@ -91,19 +90,6 @@
     object-fit: cover;
     box-sizing: content-box;
     border-radius: 16px;
-  }
-
-  img {
-    width: calc(100% - 200px);
-    left: 100px;
-    height: 100%;
-
-    background-color: $color-primary;
-
-    @include vp-1199 {
-      left: 45px;
-      width: calc(100% - 90px);
-    }
 
     @include vp-767 {
       display: none;
@@ -111,7 +97,17 @@
   }
 }
 
+.form__inner {
+  position: relative;
+
+  border-radius: 16px;
+  background-color: #316dc2;
+}
+
 .form__container {
+  position: relative;
+  z-index: 1;
+
   width: 40.2%;
   padding: 89px 74px 51px;
 

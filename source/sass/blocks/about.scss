@@ -241,10 +241,6 @@
     letter-spacing: 0.26px;
     text-transform: uppercase;
 
-    // @include vp-1440 {
-    //   font-size: size-desktop(26px);;
-    // }
-
     @include vp-1199 {
       font-size: 20px;
       line-height: 22px;
@@ -255,10 +251,6 @@
       font-size: 16px;
       line-height: 20px;
       letter-spacing: 0.16px;
-
-      & > br {
-        display: none;
-      }
     }
   }
 
@@ -270,10 +262,6 @@
     font-weight: 300;
     line-height: 20px;
     color: $color-light;
-
-    // @include vp-1440 {
-    //   font-size: size-desktop(16px);;
-    // }
 
     @include vp-1199 {
       font-size: 16px;

@@ -144,14 +144,6 @@
 
   @include vp-1199 {
     margin-bottom: 29px;
-
-    li:nth-child(4) {
-      order: 1;
-    }
-
-    li:nth-child(3) {
-      order: 2;
-    }
   }
 
   @include vp-767 {
