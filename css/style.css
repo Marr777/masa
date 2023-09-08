@@ -6606,7 +6606,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   }
 
   .questions {
-    padding-top: 10px;
+    padding-top: 4px;
   }
 
   .questions__item {
