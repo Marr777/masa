@@ -104,14 +104,6 @@
     cursor: pointer;
 
     transition: background-color 0.3s ease;
-
-    &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
-
-      &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
-    }
   }
 
   &__error {

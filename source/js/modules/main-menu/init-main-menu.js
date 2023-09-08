@@ -74,45 +74,54 @@ const onOverlayClick = (evt) => {
 };
 
 const initDropdownClick = () => {
-  dropDownBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const accordions = new Accordions();
-      const links = btn.querySelectorAll('[data-header="header-link-secondary"]');
-      if (btn.classList.contains('is-active')) {
-        setTimeout(() => {
-          accordions.closeAccordion(btn);
-        }, '50');
-        links.forEach((link) => {
-          link.setAttribute('tabindex', '-1');
-        });
-      } else {
-        setTimeout(() => {
-          accordions.openAccordion(btn);
-        }, '50');
-        links.forEach((link) => {
-          link.setAttribute('tabindex', '0');
-        });
-      }
+  if (dropDownBtns) {
+    dropDownBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const accordions = new Accordions();
+        const links = btn.querySelectorAll('[data-header="header-link-secondary"]');
+        if (btn.classList.contains('is-active')) {
+          setTimeout(() => {
+            accordions.closeAccordion(btn);
+          }, '50');
+          links.forEach((link) => {
+            link.setAttribute('tabindex', '-1');
+          });
+        } else {
+          setTimeout(() => {
+            accordions.openAccordion(btn);
+          }, '50');
+          links.forEach((link) => {
+            link.setAttribute('tabindex', '0');
+          });
+        }
+      });
     });
-  });
+  }
+
 };
 
 export const initMainMenu = () => {
-  navLinks.forEach((link) => {
-    link.setAttribute('tabindex', '-1');
-  });
-  dropdownLinks.forEach((link) => {
-    link.setAttribute('tabindex', '-1');
-  });
-  burgerBtn.addEventListener('click', onBurgerBtnClick);
-  header.addEventListener('click', onOverlayClick);
-  navLinks[navLinks.length - 1].addEventListener('blur', () => {
-    const accordions = new Accordions();
-    setTimeout(() => {
-      accordions.closeAccordion(headerInner);
-      accordions.closeAllAccordion(headerList);
-    }, '50');
-    closeMenu();
-  });
+  if (navLinks) {
+    navLinks.forEach((link) => {
+      link.setAttribute('tabindex', '-1');
+    });
+  }
+  if (dropdownLinks) {
+    dropdownLinks.forEach((link) => {
+      link.setAttribute('tabindex', '-1');
+    });
+  }
+  if (burgerBtn && header) {
+    burgerBtn.addEventListener('click', onBurgerBtnClick);
+    header.addEventListener('click', onOverlayClick);
+    navLinks[navLinks.length - 1].addEventListener('blur', () => {
+      const accordions = new Accordions();
+      setTimeout(() => {
+        accordions.closeAccordion(headerInner);
+        accordions.closeAllAccordion(headerList);
+      }, '50');
+      closeMenu();
+    });
+  }
   initDropdownClick();
 };
