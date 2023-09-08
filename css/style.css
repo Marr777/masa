@@ -2206,10 +2206,6 @@ button,
   padding: 0 100px;
 }
 
-.container--form {
-  position: relative;
-}
-
 .custom-select {
   position: relative;
   width: 300px;
@@ -3431,7 +3427,6 @@ li.is-active > .header__dropdown-btn svg {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -3441,14 +3436,15 @@ li.is-active > .header__dropdown-btn svg {
   border-radius: 16px;
 }
 
-.form img {
-  width: calc(100% - 200px);
-  left: 100px;
-  height: 100%;
+.form__inner {
+  position: relative;
+  border-radius: 16px;
   background-color: #316dc2;
 }
 
 .form__container {
+  position: relative;
+  z-index: 1;
   width: 40.2%;
   padding: 89px 74px 51px;
   color: #f0efe9;
@@ -4147,7 +4143,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   content: counter(section);
 }
 
-.depart__info-item p {
+.depart__info p {
   margin: 0;
 }
 
@@ -5395,11 +5391,6 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     line-height: 21px;
   }
 
-  .form img {
-    left: 45px;
-    width: calc(100% - 90px);
-  }
-
   .form__container {
     width: 65.2%;
     padding: 61px 46px 58px;
@@ -5527,7 +5518,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     padding: 24px 23px 28px 25px;
   }
 
-  .depart__info-item p {
+  .depart__info p {
     line-height: 20px;
   }
 
@@ -5569,18 +5560,6 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
   .news__swiper {
     margin-bottom: 29px;
-  }
-
-  .news__swiper li:nth-child(4) {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-  }
-
-  .news__swiper li:nth-child(3) {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
   }
 
   .news__item article {
@@ -6131,10 +6110,6 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     letter-spacing: 0.16px;
   }
 
-  .about__feature-item h3 > br {
-    display: none;
-  }
-
   .about__feature-item p {
     font-size: 14px;
     line-height: 20px;
@@ -6174,6 +6149,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     margin-bottom: 18px;
   }
 
+  .form picture,
   .form img {
     display: none;
   }
@@ -6428,7 +6404,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     padding: 18px 23px 19px 25px;
   }
 
-  .depart__info-item p {
+  .depart__info p {
     font-size: 14px;
     line-height: 20px;
   }
