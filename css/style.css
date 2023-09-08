@@ -2307,14 +2307,6 @@ button,
   transition: background-color 0.3s ease;
 }
 
-.custom-select__item[aria-selected=true] {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.custom-select__item[aria-selected=true].focus-visible:focus {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 .custom-select__error {
   position: absolute;
   bottom: -15px;
