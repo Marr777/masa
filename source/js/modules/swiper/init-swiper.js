@@ -137,7 +137,6 @@ export const initSwiper = () => {
     },
   });
 
-
   heroSwiper.enable();
   programsSwiper.enable();
   newsSwiper.enable();
@@ -145,24 +144,10 @@ export const initSwiper = () => {
 
   const heroSlider = document.querySelector('.hero__slides');
   const heroSlides = heroSlider.querySelectorAll('.hero__slide');
-  // const aboutSection = document.querySelector('#about');
-
-  // heroSlider.addEventListener('focus', () => {
-  //   heroSwiper.pause();
-  //   heroSwiper.slideTo(0, 300, true);
-  // });
-
-  // aboutSection.addEventListener('focus', () => {
-  //   heroSwiper.resume();
-  // });
 
   heroSlides.forEach((slide) => {
     if (!slide.classList.contains('swiper-slide-duplicate')) {
       slide.setAttribute('tabindex', 0);
-      const slideIndex = Number(slide.getAttribute('aria-label')[0]) - 1;
-      slide.addEventListener('focus', () => {
-        heroSwiper.slideTo(slideIndex, 300, true);
-      });
     } else {
       const pagination = slide.querySelector('.hero__pagination');
       const button = slide.querySelector('.hero__slide-btn');
