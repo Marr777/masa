@@ -5961,17 +5961,6 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     background-color: #ffffff;
   }
 
-  .hero__slide-info p::after {
-    right: -14px;
-    top: 0;
-    bottom: unset;
-    width: 15px;
-    height: 15px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-
   .hero__slide-info--three {
     padding: 0;
   }
@@ -6308,6 +6297,10 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     min-height: 70px;
   }
 
+  .programs__item-btn {
+    padding-left: 0;
+  }
+
   .programs__btn-icon {
     width: 30px;
     height: 30px;
@@ -6534,6 +6527,10 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     right: -16px;
     width: 16px;
     height: 16px;
+  }
+
+  .news__article-btn {
+    padding: 0;
   }
 
   .news__btn-icon {
@@ -6806,6 +6803,17 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     right: -9px;
     width: 10px;
     height: 10px;
+  }
+
+  .hero__slide-info p::after {
+    right: -14px;
+    top: 0;
+    bottom: unset;
+    width: 15px;
+    height: 15px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 
   .hero__btn-wrapper::after {
