@@ -5830,6 +5830,10 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     letter-spacing: 0.24px;
   }
 
+  .btn--swiper {
+    padding: 0;
+  }
+
   .btn__icon {
     width: 34px;
     height: 34px;
