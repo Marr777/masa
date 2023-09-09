@@ -219,6 +219,10 @@
         stroke: $color-disabled;
       }
     }
+
+    @include vp-767 {
+      padding: 0;
+    }
   }
 
   &--swiper-prev {

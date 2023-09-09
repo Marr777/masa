@@ -113,6 +113,7 @@ export class Accordions {
     const wrapper = element.querySelector('[data-accordion="wrapper"]');
     const item = element.querySelector('[data-accordion="item"]');
     const btn = element.querySelector('[data-accordion="button"]');
+    const buttons = element.querySelectorAll('[data-accordion="button"]');
     const contentElement = element.querySelector('[data-accordion="content"]');
     this._openHeight += contentElement.scrollHeight;
 
@@ -123,6 +124,11 @@ export class Accordions {
     element.classList.add('is-active');
     if (btn) {
       btn.classList.add('is-active');
+    }
+    if (buttons) {
+      buttons.forEach((button) => {
+        button.classList.add('is-active');
+      });
     }
     if (item) {
       item.classList.add('is-active');
@@ -154,6 +160,7 @@ export class Accordions {
     const contentElement = element.querySelector('[data-accordion="content"]');
     const wrapper = element.querySelector('[data-accordion="wrapper"]');
     const btn = element.querySelector('[data-accordion="button"]');
+    const buttons = element.querySelectorAll('[data-accordion="button"]');
     const item = element.querySelector('[data-accordion="item"]');
     if (!contentElement) {
       return;
@@ -162,6 +169,11 @@ export class Accordions {
     element.classList.remove('is-active');
     if (btn) {
       btn.classList.remove('is-active');
+    }
+    if (buttons) {
+      buttons.forEach((button) => {
+        button.classList.remove('is-active');
+      });
     }
     if (item) {
       item.classList.remove('is-active');

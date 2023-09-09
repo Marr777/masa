@@ -2527,6 +2527,11 @@ button,
 .btn--swiper:disabled svg {
   stroke: #a9afb7;
 }
+@media (max-width: 767px) {
+  .btn--swiper {
+    padding: 0;
+  }
+}
 .btn--swiper-prev {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
