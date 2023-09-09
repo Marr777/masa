@@ -132,8 +132,6 @@
     }
 
     @include vp-767 {
-      @include angle;
-
       padding: 20px 14px 15px;
       width: 100%;
 
@@ -141,14 +139,6 @@
       line-height: 26px;
 
       border-radius: 0 16px 16px 0;
-
-      &::after {
-        right: 20px;
-        width: 10px;
-        height: 10px;
-        transform: rotate(90deg);
-        bottom: -9px;
-      }
     }
   }
 
@@ -231,8 +221,12 @@
       border-radius: 0 0 14px 0;
 
       &::after {
+        right: -14px;
         top: 0;
         bottom: unset;
+
+        width: 15px;
+        height: 15px;
 
         transform: rotate(90deg);
       }
@@ -260,6 +254,8 @@
 
       p {
         padding: 0 14px 11px;
+
+        line-height: 19px;
       }
     }
   }

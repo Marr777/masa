@@ -2112,12 +2112,6 @@ button,
   padding: 14px 0 28px;
   margin: 0 0 44px 0;
 }
-@media screen and (max-width: 767px) {
-  .custom-select {
-    padding: 4px 0 14px;
-    width: 100%;
-  }
-}
 .custom-select__label {
   position: absolute;
   top: 50%;
@@ -3071,46 +3065,11 @@ li.is-active > .header__dropdown-btn svg {
 }
 @media (max-width: 767px) {
   .hero__slide-inner h3 {
-    position: relative;
-    background-color: #ffffff;
     padding: 20px 14px 15px;
     width: 100%;
     font-size: 22px;
     line-height: 26px;
     border-radius: 0 16px 16px 0;
-  }
-  .hero__slide-inner h3::after {
-    position: absolute;
-    right: -19px;
-    bottom: 0;
-    content: "";
-    width: 20px;
-    height: 20px;
-    -webkit-mask-image: url("../img/svg/angle.svg");
-            mask-image: url("../img/svg/angle.svg");
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-            mask-size: cover;
-    background-color: #ffffff;
-  }
-}
-@media (max-width: 767px) and (max-width: 767px) {
-  .hero__slide-inner h3::after {
-    right: -9px;
-    width: 10px;
-    height: 10px;
-  }
-}
-@media (max-width: 767px) {
-  .hero__slide-inner h3::after {
-    right: 20px;
-    width: 10px;
-    height: 10px;
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-    bottom: -9px;
   }
 }
 .hero__slide-inner--three h3 {
@@ -3243,8 +3202,11 @@ li.is-active > .header__dropdown-btn svg {
 }
 @media (max-width: 767px) {
   .hero__slide-info p::after {
+    right: -14px;
     top: 0;
     bottom: unset;
+    width: 15px;
+    height: 15px;
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
@@ -3273,6 +3235,7 @@ li.is-active > .header__dropdown-btn svg {
   }
   .hero__slide-info--three p {
     padding: 0 14px 11px;
+    line-height: 19px;
   }
 }
 .hero__slide-info::after {
@@ -4752,6 +4715,13 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   height: 30px;
   padding: 0;
 }
+@media (max-width: 767px) {
+  .programs__btn-icon {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
+}
 
 .programs__scrollbar {
   position: relative;
@@ -5591,6 +5561,13 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   width: 30px;
   height: 30px;
   padding: 0;
+}
+@media (max-width: 767px) {
+  .news__btn-icon {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
 }
 
 .news__swiper-controls {

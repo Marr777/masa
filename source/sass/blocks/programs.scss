@@ -232,6 +232,12 @@
   width: 30px;
   height: 30px;
   padding: 0;
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
 }
 
 .programs__scrollbar {
