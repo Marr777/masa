@@ -11,9 +11,9 @@ export const initSwiper = () => {
     },
     keyboard: true,
     loop: true,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
     focusableElements: 'a, button',
 
     wrapperClass: 'swiper__wrapper',

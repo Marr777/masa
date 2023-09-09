@@ -3200,7 +3200,7 @@ li.is-active > .header__dropdown-btn svg {
     height: 10px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) and (max-width: 767px) {
   .hero__slide-info p::after {
     right: -14px;
     top: 0;
@@ -4698,6 +4698,11 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+@media (max-width: 767px) {
+  .programs__item-btn {
+    padding-left: 0;
+  }
+}
 @media (hover: hover) {
   .programs__item-btn:hover:not(.focus-visible) {
     background-color: rgba(255, 255, 255, 0);
@@ -5544,6 +5549,11 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   padding: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+@media (max-width: 767px) {
+  .news__article-btn {
+    padding: 0;
+  }
 }
 @media (hover: hover) {
   .news__article-btn:hover:not(.focus-visible) {

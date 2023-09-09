@@ -221,14 +221,16 @@
       border-radius: 0 0 14px 0;
 
       &::after {
-        right: -14px;
-        top: 0;
-        bottom: unset;
+        @include vp-767 {
+          right: -14px;
+          top: 0;
+          bottom: unset;
 
-        width: 15px;
-        height: 15px;
+          width: 15px;
+          height: 15px;
 
-        transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
       }
     }
   }
