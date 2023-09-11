@@ -63,41 +63,6 @@ export const initSwiper = () => {
     },
   });
 
-  const newsSwiper = new Swiper('.news__swiper', {
-    keyboard: true,
-    wrapperClass: 'swiper__wrapper',
-    slideClass: 'swiper__slide',
-    cssMode: 'true',
-
-    navigation: {
-      nextEl: '.news__swiper-btn--next',
-      prevEl: '.news__swiper-btn--prev',
-    },
-
-    pagination: {
-      el: '.news__pagination',
-      clickable: true,
-      bulletClass: 'news__pagination-btn',
-      bulletActiveClass: 'news__pagination-btn--active',
-      renderBullet: (index, className) => {
-        return '<button class="' + className + '">' + (index + 1) + '</button>';
-      },
-    },
-
-    breakpoints: {
-      1200: {
-        slidesPerView: 'auto',
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      320: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-    },
-  });
-
   const feedbackSwiper = new Swiper('.feedback__swiper', {
     keyboard: true,
     wrapperClass: 'swiper__wrapper',
@@ -140,7 +105,6 @@ export const initSwiper = () => {
 
   heroSwiper.enable();
   programsSwiper.enable();
-  newsSwiper.enable();
   feedbackSwiper.enable();
 
   const heroSlider = document.querySelector('.hero__slides');

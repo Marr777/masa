@@ -298,7 +298,8 @@
   }
 
   &.is-invalid {
-    input {
+    input,
+    textarea {
       border: 1px solid $color-error;
       background-color: rgba(255, 94, 102, 0.2);
     }
@@ -442,12 +443,14 @@
 
   transition: all $trans-default;
 
-  @include hover {
-    color: $color-primary;
+  &:not([aria-selected="true"]) {
+    @include hover {
+      color: $color-primary;
 
-    &:active {
-      color: $color-default-white;
-      background-color: $color-primary;
+      &:active {
+        color: $color-default-white;
+        background-color: $color-primary;
+      }
     }
   }
 
@@ -476,9 +479,52 @@
   }
 
   label {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20px auto;
     gap: 10px;
     align-items: center;
+
+    cursor: pointer;
+
+    @include hover {
+      & > .form__checkbox-icon {
+        border: 1px solid $color-primary-darker;
+      }
+
+      & > .form__checkbox-icon--primary {
+        border: 1px solid $color-default-white;
+      }
+
+
+      & > input[type="checkbox"]:checked~.form__checkbox-icon {
+        background-color: $color-transparent;
+        border: 1px solid $color-primary;
+
+        &::after {
+          background-color: $color-primary;
+        }
+      }
+
+      & > input[type="checkbox"]:checked~.form__checkbox-icon--primary {
+        background-color: $color-transparent;
+        border: 1px solid $color-default-white;
+
+        &::after {
+          background-color: $color-default-white;
+        }
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      & > .form__checkbox-icon {
+        border: 1px solid $color-primary-darker;
+      }
+
+      & > .form__checkbox-icon--primary {
+        border: 1px solid $color-default-white;
+      }
+    }
   }
 
   input[type="checkbox"] {
@@ -583,7 +629,7 @@
   }
 }
 
-input[type="checkbox"]:checked ~ .form__checkbox-icon {
+input[type="checkbox"]:checked~.form__checkbox-icon {
   background-color: $color-primary;
 
   &::after {
@@ -619,7 +665,7 @@ input[type="checkbox"]:checked ~ .form__checkbox-icon {
   }
 }
 
-input[type="checkbox"]:checked ~ .form__checkbox-icon--primary {
+input[type="checkbox"]:checked~.form__checkbox-icon--primary {
   background-color: $color-default-white;
 
   &::after {

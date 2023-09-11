@@ -10,7 +10,7 @@
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 52px 75% auto;
+  grid-template-columns: 52px 62% minmax(148px, auto);
   grid-template-rows: auto auto;
   column-gap: 52px;
   row-gap: 26px;
