@@ -291,6 +291,7 @@
     width: 89%;
     padding: 3px 10px 4px 0;
     margin-right: 72px;
+    min-width: 169px;
 
     font-size: 24px;
     font-weight: 400;
@@ -311,6 +312,7 @@
     @include vp-1199 {
       padding: 5px 7px 2px 0;
       width: 87%;
+      min-width: unset;
 
       font-size: 20px;
       line-height: 24px;
@@ -376,6 +378,7 @@
   display: flex;
   gap: 16px;
   width: 100%;
+  min-width: 190px;
 
   border-radius: 0 12px;
   background-color: $color-light;
@@ -412,6 +415,7 @@
 
   @include vp-1199 {
     padding: 9px 17px 12px 0;
+    min-width: unset;
   }
 
   @include vp-767 {
