@@ -2694,6 +2694,22 @@ button,
   cursor: pointer;
 }
 
+.header--open .header__logo-link {
+  position: relative;
+}
+
+.header--open .header__logo-link::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 120;
+  content: "";
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(13, 29, 51, 0.4);
+}
+
 .header__logo-link {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
