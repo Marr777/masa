@@ -6237,8 +6237,6 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   }
 
   .form__checkbox-icon {
-    width: 26px;
-    height: 21px;
     -webkit-transform: translateX(-2px);
     -ms-transform: translateX(-2px);
     transform: translateX(-2px);
