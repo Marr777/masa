@@ -28,6 +28,24 @@
     height: 100vh;
     background-color: $modal-overlay;
     cursor: pointer;
+
+    .header__logo-link {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 120;
+        content: "";
+
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+
+        background-color: $modal-overlay;
+      }
+    }
   }
 }
 
